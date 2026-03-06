@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>Tech News Radio - Antigravity</title>
+    <link>https://hroabe.github.io/tech_brief_publish/</link>
+    <description>毎朝10分で最新テックニュースをAIがお届け</description>
+    <language>ja</language>
+    <copyright>© 2026 Antigravity</copyright>
+    <generator>Antigravity Podcast Pipeline</generator>
+    <itunes:author>Antigravity</itunes:author>
+    <itunes:owner>
+      <itunes:name>Antigravity</itunes:name>
+      <itunes:email>contact@example.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://hroabe.github.io/tech_brief_publish/episodes/latest/cover_art.png" />
+    <itunes:category text="Technology">
+      <itunes:category text="Tech News" />
+    </itunes:category>
+    <itunes:explicit>false</itunes:explicit>
+    <item>
+      <title>Tech News Radio - 2026-03-07</title>
+      <description># Tech News Radio Show Notes - #002 (2026-03-06)
+
+## エピソード情報
+- **エピソード**: #002
+- **日付**: 2026-03-06
+- **尺**: 約 10 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Triplet Superconductor](https://www.sciencedaily.com/releases/2026/02/260221000252.htm)
+- [Astra: An open-source observatory control software](https://github.com/ppp-one/astra)
+- [Hardening Firefox with Anthropic's Red Team](https://www.anthropic.com/news/mozilla-firefox-security)
+
+### 注目の深掘り
+- [Ada 2022](https://www.adaic.org/ada-resources/standards/ada22/)
+
+### 小ネタ・その他
+- [Apache Otava](https://otava.apache.org/)
+- [Show HN: Moongate – Ultima Online server emulator in .NET 10 with Lua scripting](https://github.com/moongate-community/moongatev2)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-07/episode_audio.mp3" length="10816173" type="audio/mpeg" />
+      <pubDate>Sat, 07 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">antigravity-2026-03-07</guid>
+      <itunes:duration>10:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>

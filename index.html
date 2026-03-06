@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech News Radio - Antigravity</title>
+<style>
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --border: #2a2d3a;
+  --text: #e4e4e7;
+  --text-muted: #9ca3af;
+  --accent: #6366f1;
+  --accent-light: #818cf8;
+  --strong: #fff;
+}
+[data-theme="light"] {
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --border: #dee2e6;
+  --text: #212529;
+  --text-muted: #6c757d;
+  --accent: #4f46e5;
+  --accent-light: #4338ca;
+  --strong: #000;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  transition: background 0.3s, color 0.3s;
+}
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 800px; margin: 0 auto; padding: 0 1.5rem; }
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+}
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header h1 a { color: var(--text); }
+header p { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.25rem; }
+.episode-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  transition: border-color 0.2s;
+}
+.episode-card:hover { border-color: var(--accent); }
+.episode-card .date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 0.5rem;
+}
+.episode-card h2 { font-size: 1.15rem; margin-bottom: 0.75rem; }
+.episode-card h2 a { color: var(--text); }
+.episode-card .meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.episode-page .cover {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.episode-page audio {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+.episode-page .content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.episode-page .content h1 { font-size: 1.4rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; }
+.episode-page .content h2 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--accent-light); }
+.episode-page .content h3 { font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+.episode-page .content p { margin-bottom: 0.75rem; }
+.episode-page .content ul, .episode-page .content ol { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+.episode-page .content li { margin-bottom: 0.3rem; }
+.episode-page .content strong { color: var(--strong); }
+.episode-page .content em { color: var(--text-muted); }
+.episode-page .content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+.episode-page .content a { word-break: break-all; }
+.tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0;
+}
+.tab-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  border-bottom: none;
+  color: var(--text-muted);
+  padding: 0.6rem 1.25rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  border-radius: 8px 8px 0 0;
+}
+.tab-btn.active { background: var(--surface); color: var(--text); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+.nav-links a {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  margin-bottom: 2rem;
+}
+.theme-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.35rem 0.6rem;
+  line-height: 1;
+  transition: background 0.3s, border-color 0.3s;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+@media (max-width: 600px) {
+  .container { padding: 0 1rem; }
+  .episode-page .content { padding: 1.25rem; }
+}
+</style>
+
+<script>
+(function(){
+  var t = localStorage.getItem('theme');
+  if (t === 'light') document.documentElement.setAttribute('data-theme','light');
+})();
+function toggleTheme(){
+  var el = document.documentElement;
+  if (el.getAttribute('data-theme') === 'light') {
+    el.removeAttribute('data-theme');
+    localStorage.setItem('theme','dark');
+  } else {
+    el.setAttribute('data-theme','light');
+    localStorage.setItem('theme','light');
+  }
+  updateIcon();
+}
+function updateIcon(){
+  var btn = document.getElementById('theme-btn');
+  if (!btn) return;
+  btn.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u263E' : '\u2600';
+}
+document.addEventListener('DOMContentLoaded', updateIcon);
+</script>
+
+
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-row">
+      <div>
+        <h1><a href="index.html">Tech News Radio</a></h1>
+        <p>AI-powered daily tech news in 10 minutes</p>
+      </div>
+      <button id="theme-btn" class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode"></button>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Episodes</a>
+      <a href="podcast_feed.xml">RSS Feed</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <div class="rss-link">
+    <span>📡</span>
+    <a href="podcast_feed.xml">Podcast RSS Feed</a>
+  </div>
+  <h2 style="font-size:1.1rem; margin-bottom:1rem; color:var(--text-muted);">Episodes</h2>
+  
+    <a href="episodes/2026-03-07/index.html" style="text-decoration:none;">
+      <div class="episode-card">
+        <div class="date">2026-03-07</div>
+        <h2>Tech News Radio - 2026-03-07</h2>
+        <div class="meta">
+          <span>10 min</span>
+          <span>6 topics</span>
+        </div>
+      </div>
+    </a>
+</main>
+<footer>
+  <div class="container">
+    <p>&copy; 2026 Antigravity &mdash; Generated by AI Pipeline</p>
+  </div>
+</footer>
+
+</body>
+</html>
