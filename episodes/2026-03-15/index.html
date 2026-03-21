@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech News Radio - 2026-03-15</title>
+<style>:root {
+  --bg: #121212;
+  --surface: #1E1E1E;
+  --surface-strong: #252525;
+  --border: rgba(255, 255, 255, 0.05);
+  --text: #E0E0E0;
+  --text-muted: #A0A0A0;
+  --accent: #00D8FF;
+  --accent-light: #6C8AFF;
+  --accent-soft: rgba(0, 216, 255, 0.1);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --strong: #fff;
+  --border-radius: 12px;
+}
+[data-theme="light"] {
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --surface-strong: #f0f0f0;
+  --border: rgba(0, 0, 0, 0.08);
+  --text: #1a1a1a;
+  --text-muted: #666666;
+  --accent: #0099b3;
+  --accent-light: #5060c0;
+  --accent-soft: rgba(0, 153, 179, 0.08);
+  --success: #059669;
+  --warning: #d97706;
+  --strong: #000;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, input, textarea, select { font: inherit; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px 80px; }
+
+/* Header */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+  margin-bottom: 0;
+}
+header .container { padding: 24px 20px; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header h1 a { color: var(--strong); }
+header h1 a:hover { text-decoration: none; }
+header p { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem; }
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: var(--strong); text-decoration: none; }
+.theme-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.35rem 0.6rem;
+  line-height: 1;
+  transition: background 0.3s, border-color 0.3s;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+
+/* Section titles */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--strong);
+  letter-spacing: 0.05em;
+}
+.section-subtitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  color: var(--strong);
+}
+.section-desc {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+}
+
+/* Grid layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.col-half { width: calc(50% - 12px); }
+.col-full { width: 100%; }
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 216, 255, 0.3);
+}
+[data-theme="light"] .card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 153, 179, 0.3);
+}
+.card h2 {
+  font-size: 1.25rem;
+  color: var(--strong);
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card ul { list-style: none; padding-left: 0; margin: 0; }
+.card li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.card li:last-child { margin-bottom: 0; }
+.list-check li::before { content: '\2713'; position: absolute; left: 0; color: var(--accent); font-weight: bold; font-size: 1.1em; }
+.list-arrow li::before { content: '\2794'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.9em; top: 0.1em; }
+.list-dot li::before { content: '\25A0'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.6em; top: 0.5em; }
+
+/* Hero card */
+.hero-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-size: 1.5rem;
+  color: var(--strong);
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.hero-description {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+.hero-description:last-of-type { margin-bottom: 24px; }
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hero-pill {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(0, 216, 255, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+[data-theme="light"] .hero-pill {
+  border-color: rgba(0, 153, 179, 0.3);
+}
+
+/* RSS link */
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+.rss-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Episode list & cards */
+.episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.episode-card {
+  display: block;
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.episode-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 216, 255, 0.3);
+  text-decoration: none;
+}
+[data-theme="light"] .episode-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 153, 179, 0.3);
+}
+.episode-card:hover .episode-title {
+  color: var(--accent);
+}
+.episode-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.episode-title {
+  font-size: 1.15rem;
+  color: var(--accent-light);
+  margin: 0 0 12px 0;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+.episode-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Content card (markdown pages) */
+.content-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.content-card h1 { font-size: 1.8rem; font-weight: bold; color: var(--strong); margin-bottom: 8px; letter-spacing: 0.05em; }
+.content-card h2 { font-size: 1.25rem; color: var(--strong); margin-top: 28px; margin-bottom: 16px; }
+.content-card h3 { font-size: 1.05rem; color: var(--accent-light); margin-top: 20px; margin-bottom: 8px; }
+.content-card p { margin-bottom: 12px; color: var(--text); }
+.content-card ul, .content-card ol { margin-left: 1.5rem; margin-bottom: 12px; }
+.content-card li { margin-bottom: 6px; }
+
+/* Notice card */
+.notice-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 24px;
+  margin-top: 32px;
+}
+.notice-card h2 {
+  font-size: 1.25rem;
+  color: var(--accent-light);
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(108, 138, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.notice-card h3 {
+  font-size: 1rem;
+  color: var(--accent-light);
+  margin-bottom: 12px;
+}
+.notice-card ul { list-style: none; padding-left: 0; margin: 0; }
+.notice-card li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+.notice-card li::before {
+  content: '\25A0';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.6em;
+  top: 0.5em;
+}
+.notice-card li:last-child { margin-bottom: 0; }
+
+/* Pagination */
+.page-heading {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--strong);
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.pagination a,
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.88rem;
+}
+.pagination a:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.pagination .current {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.pagination .summary {
+  min-width: auto;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+}
+
+/* Episode page */
+.episode-page .cover {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  display: block;
+}
+.episode-page audio {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.episode-page .content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.episode-page .content h1 { font-size: 1.4rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; color: var(--strong); }
+.episode-page .content h2 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--accent-light); }
+.episode-page .content h3 { font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+.episode-page .content p { margin-bottom: 0.75rem; }
+.episode-page .content ul, .episode-page .content ol { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+.episode-page .content li { margin-bottom: 0.3rem; }
+.episode-page .content strong { color: var(--strong); }
+.episode-page .content em { color: var(--text-muted); }
+.episode-page .content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+.episode-page .content a { word-break: break-all; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  transition: color 0.2s ease;
+  position: relative;
+}
+.tab-btn:hover { color: var(--strong); }
+.tab-btn.active { color: var(--accent); }
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Disclosure list */
+.disclosure-list {
+  list-style: none;
+  margin-left: 0;
+}
+.disclosure-list li {
+  position: relative;
+  padding-left: 1rem;
+}
+.disclosure-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--accent-light);
+}
+
+/* Buttons */
+.button-link,
+.consent-action {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.button-link:hover,
+.consent-action:hover {
+  border-color: var(--accent);
+}
+.button-link.primary,
+.consent-action.primary {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  color: #fff;
+}
+.button-link.primary:hover,
+.consent-action.primary:hover {
+  opacity: 0.85;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-grid {
+  display: flex;
+  gap: 20px;
+}
+.form-grid > div { flex: 1; }
+.contact-form label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--bg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--strong);
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+[data-theme="light"] .contact-form input,
+[data-theme="light"] .contact-form textarea,
+[data-theme="light"] .contact-form select {
+  border-color: var(--border);
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(0, 216, 255, 0.2);
+}
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+.checkbox-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.checkbox-row input { width: auto; }
+.contact-form button {
+  background: var(--accent-light);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  width: 100%;
+}
+.contact-form button:hover { opacity: 0.85; }
+.contact-form button:active { transform: scale(0.98); }
+.fine-print {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Footer */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+.footer-links a,
+.footer-links button {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.footer-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+footer .container { padding: 0 20px; }
+
+/* Consent banner */
+.consent-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1000;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+.consent-banner[hidden] { display: none; }
+.consent-banner h3 {
+  font-size: 1rem;
+  margin-bottom: 0.45rem;
+}
+.consent-banner p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+.consent-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .col-half { width: 100%; }
+  .form-grid { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .container { padding: 20px 16px 60px; }
+  header .container { padding: 16px; }
+  .hero-card,
+  .content-card,
+  .notice-card,
+  .card { padding: 20px; }
+  .episode-page .content { padding: 1.25rem; }
+  .header-row { align-items: flex-start; }
+  .consent-banner { left: 0.75rem; right: 0.75rem; }
+}
+</style>
+<script>
+(function(){
+  var t = localStorage.getItem('theme');
+  if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+})();
+function toggleTheme(){
+  var el = document.documentElement;
+  if (el.getAttribute('data-theme') === 'light') {
+    el.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    el.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  }
+  updateIcon();
+}
+function updateIcon(){
+  var btn = document.getElementById('theme-btn');
+  if (!btn) return;
+  btn.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u263E' : '\u2600';
+}
+document.addEventListener('DOMContentLoaded', updateIcon);
+</script>
+
+<script>
+const PLAUSIBLE_DOMAIN = "";
+const PLAUSIBLE_SCRIPT_SRC = "https://plausible.io/js/script.js";
+const ANALYTICS_CONSENT_KEY = 'site.analyticsConsent';
+
+function loadPlausible() {
+  if (!PLAUSIBLE_DOMAIN) return;
+  if (document.querySelector('script[data-plausible-loader="true"]')) return;
+  var script = document.createElement('script');
+  script.defer = true;
+  script.src = PLAUSIBLE_SCRIPT_SRC;
+  script.setAttribute('data-domain', PLAUSIBLE_DOMAIN);
+  script.setAttribute('data-plausible-loader', 'true');
+  document.head.appendChild(script);
+}
+
+function hideConsentBanner() {
+  var banner = document.getElementById('consent-banner');
+  if (banner) banner.hidden = true;
+}
+
+function showConsentBanner() {
+  var banner = document.getElementById('consent-banner');
+  if (banner) banner.hidden = false;
+}
+
+function updateConsentUi() {
+  if (!PLAUSIBLE_DOMAIN) {
+    hideConsentBanner();
+    return;
+  }
+  var consent = localStorage.getItem(ANALYTICS_CONSENT_KEY);
+  if (consent === 'accepted') {
+    loadPlausible();
+    hideConsentBanner();
+  } else if (consent === 'rejected') {
+    hideConsentBanner();
+  } else {
+    showConsentBanner();
+  }
+}
+
+function acceptAnalyticsConsent() {
+  localStorage.setItem(ANALYTICS_CONSENT_KEY, 'accepted');
+  updateConsentUi();
+}
+
+function rejectAnalyticsConsent() {
+  localStorage.setItem(ANALYTICS_CONSENT_KEY, 'rejected');
+  updateConsentUi();
+}
+
+function openCookieSettings() {
+  if (!PLAUSIBLE_DOMAIN) return;
+  showConsentBanner();
+}
+
+document.addEventListener('DOMContentLoaded', updateConsentUi);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.3.1/dist/purify.min.js" integrity="sha384-80VlBZnyAwkkqtSfg5NhPyZff6nU4K/qniLBL8Jnm4KDv6jZhLiYtJbhglg/i9ww" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@17.0.3/lib/marked.umd.js" integrity="sha384-cYPlWZ3J0Pi4sIKo/Yy2hbXAfqi7S7h4/5xARy+4Aa2brtE1tM7Old55+Y6NkFBW" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-row">
+      <div>
+        <h1><a href="../../index.html">Tech News Radio</a></h1>
+        <p>毎朝、ビジネスパーソンや開発者向けの最新のテックニュースをまとめてお届けします。</p>
+      </div>
+      <button id="theme-btn" class="theme-toggle" onclick="toggleTheme()" title="表示テーマ切り替え"></button>
+    </div>
+    <nav class="nav-links">
+      <a href="../../index.html">Episodes</a>
+      <a href="../../about.html">About</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../podcast_feed.xml">RSS Feed</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container episode-page">
+  <img class="cover" src="eyecatch.png" alt="Cover Art">
+  <audio controls preload="metadata"><source src="episode_audio.mp3" type="audio/mpeg"></audio>
+
+  <section id="episode-notice" class="notice-card"></section>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('blog')">Blog</button>
+    <button class="tab-btn" onclick="switchTab('notes')">Show Notes</button>
+  </div>
+
+  <div id="tab-blog" class="content tab-content active"></div>
+  <div id="tab-notes" class="content tab-content"></div>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="../../about.html">About</a>
+      <a href="../../policy.html">ポリシー</a>
+      <a href="../../privacy.html">プライバシーポリシー</a>
+      <a href="../../contact.html">お問い合わせ</a>
+      <button type="button" onclick="openCookieSettings()">Cookie設定</button>
+    </div>
+    <p>本サイトのテキストと音声にはAI生成コンテンツを含みます。最終確認は各話の出典リンクから原文をご確認ください。</p>
+    <p>&copy; 2026 Studio Machikita</p>
+  </div>
+</footer>
+
+
+<script>
+(function() {
+  const markdownContent = `### このエピソードについて
+
+- 本ページは公開情報をもとにした要約を含みます。
+- テキストと音声にはAI生成を含み、正確性や最新性は保証しません。
+- 紹介している記事やサービス名等の権利は各権利者に帰属します。
+- 内容に問題がある場合は [お問い合わせページ](../../contact.html) からご連絡ください。`;
+  const renderMode = "default";
+  function renderMarkdown(md) {
+    if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+      marked.setOptions({ breaks: true });
+      return DOMPurify.sanitize(marked.parse(md));
+    }
+    var el = document.createElement('pre');
+    el.style.whiteSpace = 'pre-wrap';
+    el.textContent = md;
+    return el.outerHTML;
+  }
+  const target = document.getElementById('episode-notice');
+  target.innerHTML = renderMarkdown(markdownContent);
+  if (renderMode === 'hero-pills') {
+    var heading = target.querySelector('h2');
+    if (heading) {
+      var h1 = document.createElement('h1');
+      h1.className = 'hero-title';
+      h1.innerHTML = heading.innerHTML;
+      heading.replaceWith(h1);
+    }
+    target.querySelectorAll('p').forEach(function(p) {
+      p.classList.add('hero-description');
+    });
+    var list = target.querySelector('ul');
+    if (list) {
+      var pillWrap = document.createElement('div');
+      pillWrap.className = 'hero-meta';
+      Array.from(list.querySelectorAll('li')).forEach(function(item) {
+        var pill = document.createElement('span');
+        pill.className = 'hero-pill';
+        pill.textContent = item.textContent.trim();
+        pillWrap.appendChild(pill);
+      });
+      list.replaceWith(pillWrap);
+    }
+  }
+})();
+</script>
+
+<script>
+const blogMd = `<!--
+---
+title: "Tech News Radio — 2026-03-15"
+subtitle: "SBCL ファイバー：軽量な協調スレッド / MCPは死んだ、MCPよ永遠に！ / 最もエレガントなTCPホールパンチングアルゴリズム — Aul Maの..."
+date: "2026-03-15"
+vol: 9
+topics:
+  - OSS
+  - AI
+  - LLM
+  - Web
+  - Security
+author: "Hiroki Abe"
+---
+-->
+# 🎧 Tech News Radio — 2026-03-15
+
+> 📖 読了時間: 約12分 ｜ 🏷️ OSS, AI, LLM, Web, Security
+
+---
+
+## 📌 今日のハイライト
+- 🤖 **MCPは死んだ、MCPよ永遠に！** — MCPの誤解を解き、本質的な価値を再定義する論考
+- 🤖 **PPOを用いた言語モデルのツリー探索蒸留** — 木探索の知識蒸留でLLMを強化する新手法
+- 🔬 **数学蒸留チャレンジ ― 等式理論** — Terence Taoが等式理論の数学蒸留チャレンジを提唱
+- 🌐 **最もエレガントなTCPホールパンチングアルゴリズム — Aul Maの研究施設** — TCPホールパンチングの洗練されたアルゴリズムを解説
+- 📦 **SBCL ファイバー：軽量な協調スレッド** — SBCLに軽量な協調スレッド「Fibers」を実装中
+- 📦 **GitHub - xodn348/han: Rustで書かれた、韓国語キーワードを使用するコンパイル型プログラミング言語** — 韓国語キーワードを持つコンパイル型言語「Han」がRustで開発
+
+---
+
+## 🤖 MCPは死んだ、MCPよ永遠に！
+\`AI\` \`LLM\`
+
+<details>
+<summary>📄 原題: MCP is Dead; Long Live MCP!</summary>
+</details>
+
+> **一言で**: MCPの誤解を解き、本質的な価値を再定義する論考
+
+- SNSや業界でMCP（Model Context Protocol）への過剰な期待と誤解が広がっている
+- トークン削減効果など、誤って信じられている利点への疑問を提起
+- MCPの真価は集中管理・認証・テレメトリ（監視計測）・コンテンツ配信にあると主張
+- エージェント実行環境の一時性や標準化された配信など、見落とされがちな本質的機能を指摘
+
+💡 **なぜ重要か**
+MCPはAnthropicが提唱したAIモデルにツールやデータへのアクセスを提供するプロトコルです。AIエージェントブームの中で急速に注目を集めましたが、SNS上での誇張や誤った理解も同時に広まっています。この記事はその「ハイプサイクル（過熱と幻滅の波）」に警鐘を鳴らしつつ、MCPが本当に価値を持つ領域を整理しようとしています。 MCPのような標準プロトコルが正しく理解・活用されるかどうかは、AIエージェント基盤の設計品質に直結します。誤解に基づいた導入が広がると、後から設計の見直しを迫られるチームが増える可能性があります。一方、認証・観測性・コンテンツ配信といった本質的な強みが正しく認識されれば、エンタープライズ向けAI基盤の標準部品として定着する可能性があります。
+
+🎯 **今日のアクション**
+MCPを導入・評価する際は、SNSの評判ではなく仕様と実装の実態を確認しましょう。特に「トークン削減」などの効果は自社環境で検証し、認証・テレメトリ・コンテンツ配信の観点で自チームのニーズと照合することをお勧めします。
+
+🔗 [原文を読む](https://chrlschn.dev/blog/2026/03/mcp-is-dead-long-live-mcp/)
+
+---
+
+## 🤖 PPOを用いた言語モデルのツリー探索蒸留
+\`AI\` \`LLM\`
+
+<details>
+<summary>📄 原題: Tree Search Distillation for Language Models using PPO</summary>
+</details>
+
+> **一言で**: 木探索の知識蒸留でLLMを強化する新手法
+
+- AlphaZeroのような木探索をLLMに応用し、PPOで方策を蒸留する手法を提案
+- DeepSeek-R1チームも類似アプローチの限界を指摘しており、課題は業界共通
+- テスト時の探索能力をモデル本体に取り込み、推論コストを下げる狙い
+
+💡 **なぜ重要か**
+AlphaZeroは対局中に木探索でより強い手を見つけ、その知識をネットワーク本体に蒸留することで超人的な強さを実現しました。LLMでも同様に、推論時（テスト時）に探索を行って質の高い出力を得る研究は進んでいますが、その探索結果をモデル自体に効率よく蒸留する手法はまだ確立されていません。PPO（近接方策最適化）という強化学習アルゴリズムを使ってこのギャップを埋めようとする試みです。 この方向性が実用化されれば、大規模な推論計算を毎回行わなくても、蒸留済みモデルが高品質な出力を返せるようになります。推論コストの削減と性能向上を同時に狙えるため、LLMの商用展開コストに直結する重要な研究領域です。DeepSeek-R1チームも壁にぶつかったとされるこの課題が解決されれば、次世代モデルの訓練パラダイムが変わる可能性があります。
+
+🎯 **今日のアクション**
+木探索とPPOを組み合わせた蒸留の実装詳細が公開され次第、自社モデルの微調整パイプラインへの適用可能性を検討してください。まずはAlphaZeroの蒸留プロセスを改めて理解し、LLMの報酬設計との違いを整理しておくと、論文を読む際の理解が深まります。
+
+🔗 [原文を読む](https://ayushtambde.com/blog/tree-search-distillation-for-language-models-using-ppo/)
+
+---
+
+## 🔬 数学蒸留チャレンジ ― 等式理論
+\`Science\` \`AI\` \`LLM\`
+
+<details>
+<summary>📄 原題: Mathematics Distillation Challenge &#8211; Equational Theories</summary>
+</details>
+
+> **一言で**: Terence Taoが等式理論の数学蒸留チャレンジを提唱
+
+- 要点1: 数学者Terence Taoのブログ「What's new」で公開された記事
+- 要点2: テーマは「等式理論（Equational Theories）」の数学的蒸留チャレンジ
+- 要点3: タグにmath.GR（群論関連）が含まれ、代数構造が対象と見られる
+- 要点4: 2026年3月13日付けの投稿で、研究・解説の発信が目的とみられる
+
+💡 **なぜ重要か**
+Terence Taoはフィールズ賞受賞者であり、そのブログは数学コミュニティで広く読まれています。「数学蒸留（Mathematics Distillation）」は、複雑な数学的概念を本質的な形に整理・圧縮する試みと見られます。等式理論は代数構造の基礎をなす分野で、群論や環論などと深く関わります。こうした著名研究者による公開チャレンジは、コミュニティ全体の知識共有を促す取り組みとして注目されます。 AIや自動定理証明の分野では、数学的知識の構造化・蒸留が重要な課題です。Taoのような第一線の研究者が数学の本質を整理する試みは、LLMの数学的推論能力向上にも間接的に貢献する可能性があります。ただし、記事の詳細は提供された情報からは確認できないため、具体的な影響は記事本文を参照する必要があります。
+
+🎯 **今日のアクション**
+Terence Taoのブログ「What's new」で記事全文を確認し、チャレンジの詳細や参加方法を把握することをお勧めします。数学的基礎に関心のあるエンジニアや研究者は、等式理論の学習機会として活用できるかもしれません。
+
+🔗 [原文を読む](https://terrytao.wordpress.com/2026/03/13/mathematics-distillation-challenge-equational-theories/)
+
+---
+
+## 🌐 最もエレガントなTCPホールパンチングアルゴリズム — Aul Maの研究施設
+\`Web\` \`Security\` \`OSS\`
+
+<details>
+<summary>📄 原題: A most elegant TCP hole punching algorithm &mdash; Aul Ma&#39;s research facility</summary>
+</details>
+
+> **一言で**: TCPホールパンチングの洗練されたアルゴリズムを解説
+
+- 要点1: TCPホールパンチング（NATを越えたP2P接続技術）の新しいアルゴリズムを紹介
+- 要点2: 「Aul Ma's research facility」というブログで公開された技術的考察
+- 要点3: オフラインコンピューティングや暗号技術との関連にも言及している模様
+
+💡 **なぜ重要か**
+NATを越えてピア同士が直接通信するホールパンチングは、VPNやP2Pアプリで長年使われてきた技術です。TCPでの実装はUDPより難しく、信頼性の高い手法の確立が求められています。個人研究者がこの課題に取り組んだ記事として注目されています。 TCPホールパンチングの改善は、中央サーバへの依存を減らした分散通信の実現につながります。オフライン環境や検閲耐性のあるネットワーク設計にも応用できる可能性があります。
+
+🎯 **今日のアクション**
+P2P通信やNAT越えの実装を検討しているエンジニアは、この記事のアルゴリズムを参照し、既存のUDP前提の設計をTCPでも検証してみる価値があります。
+
+🔗 [原文を読む](https://robertsdotpm.github.io/cryptography/tcp_hole_punching.html)
+
+---
+
+## 📦 SBCL ファイバー：軽量な協調スレッド
+\`OSS\`
+
+<details>
+<summary>📄 原題: SBCL Fibers: Lightweight Cooperative Threads</summary>
+</details>
+
+> **一言で**: SBCLに軽量な協調スレッド「Fibers」を実装中
+
+- Anthony Greenが、SBCL向けの軽量ユーザーランド協調スレッド実装を開発中
+- 現在は作業中のドラフト文書であり、実装の詳細は今後変わる可能性あり
+- 試験的なコードはGitHubの fibers-v2 ブランチで公開済み
+- 文書はリビングドキュメント形式で、改訂履歴も参照できる
+
+💡 **なぜ重要か**
+SBCL（Steel Bank Common Lisp）はCommon Lisp処理系の代表格です。従来のOSスレッドは生成コストが高く、大量の並行処理には不向きです。ユーザーランドで動く軽量な協調スレッド（Fibers）を導入することで、より効率的な並行処理が実現できます。Go言語のgoroutineやErlangのプロセスに近い発想で、Lisp処理系にも同様の仕組みを持ち込もうという試みです。 Common Lispは研究・AI・金融分野で根強く使われています。軽量スレッドが安定して使えるようになれば、SBCLでの非同期処理や高並行サーバーの実装が現実的な選択肢になります。他のLisp処理系や関数型言語コミュニティにも設計上の知見が波及する可能性があります。
+
+🎯 **今日のアクション**
+Common LispやSBCLを使っているエンジニアは、GitHubの fibers-v2 ブランチを試して動作を確認しておくと良いでしょう。まだ開発中のため本番利用は避けつつ、フィードバックをコミュニティに還元することが貢献につながります。
+
+🔗 [原文を読む](https://atgreen.github.io/repl-yell/posts/sbcl-fibers/)
+
+---
+
+## 📦 GitHub - xodn348/han: Rustで書かれた、韓国語キーワードを使用するコンパイル型プログラミング言語
+\`OSS\` \`Web\`
+
+<details>
+<summary>📄 原題: GitHub - xodn348/han: A compiled programming language with Korean keywords, written in Rust</summary>
+</details>
+
+> **一言で**: 韓国語キーワードを持つコンパイル型言語「Han」がRustで開発
+
+- Rustで書かれたコンパイル型プログラミング言語「Han」がOSSとして公開
+- キーワード（予約語）に韓国語を採用した点が最大の特徴
+- GitHubリポジトリ「xodn348/han」で開発が進められている
+
+💡 **なぜ重要か**
+プログラミング言語のキーワードは英語が事実上の標準です。しかし、英語を母語としない開発者にとって、英語キーワードは学習の障壁になり得ます。日本語や中国語など、自国語キーワードを持つ言語の試みは過去にも存在しており、Hanはその韓国語版と言える取り組みです。Rustという信頼性の高い言語で実装されている点も注目されます。 実用言語として普及するかどうかは未知数ですが、「英語以外の言語でプログラミングを学ぶ」という問いを改めて提起します。教育現場での活用や、多言語対応コンパイラ設計の参考事例として、長期的に議論を呼ぶ可能性があります。
+
+🎯 **今日のアクション**
+言語設計やコンパイラ実装に興味があるエンジニアは、RustによるコンパイラのコードをGitHubで確認してみる価値があります。自国語キーワード言語の設計思想は、教育ツール開発のヒントにもなり得ます。
+
+🔗 [原文を読む](https://github.com/xodn348/han)
+
+---
+
+## 🔗 出典一覧
+- [SBCL ファイバー：軽量な協調スレッド](https://atgreen.github.io/repl-yell/posts/sbcl-fibers/)
+- [MCPは死んだ、MCPよ永遠に！](https://chrlschn.dev/blog/2026/03/mcp-is-dead-long-live-mcp/)
+- [最もエレガントなTCPホールパンチングアルゴリズム — Aul Maの研究施設](https://robertsdotpm.github.io/cryptography/tcp_hole_punching.html)
+- [PPOを用いた言語モデルのツリー探索蒸留](https://ayushtambde.com/blog/tree-search-distillation-for-language-models-using-ppo/)
+- [GitHub - xodn348/han: Rustで書かれた、韓国語キーワードを使用するコンパイル型プログラミング言語](https://github.com/xodn348/han)
+- [数学蒸留チャレンジ ― 等式理論](https://terrytao.wordpress.com/2026/03/13/mathematics-distillation-challenge-equational-theories/)`;
+const notesMd = `# Tech News Radio Show Notes - #009 (2026-03-15)
+
+## エピソード情報
+- **エピソード**: #009
+- **日付**: 2026-03-15
+- **尺**: 約 10 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [MCP is Dead; Long Live MCP!](https://chrlschn.dev/blog/2026/03/mcp-is-dead-long-live-mcp/)
+- [Tree Search Distillation for Language Models using PPO](https://ayushtambde.com/blog/tree-search-distillation-for-language-models-using-ppo/)
+- [Mathematics Distillation Challenge &#8211; Equational Theories](https://terrytao.wordpress.com/2026/03/13/mathematics-distillation-challenge-equational-theories/)
+
+### 注目の深掘り
+- [A most elegant TCP hole punching algorithm &mdash; Aul Ma&#39;s research facility](https://robertsdotpm.github.io/cryptography/tcp_hole_punching.html)
+
+### 小ネタ・その他
+- [SBCL Fibers: Lightweight Cooperative Threads](https://atgreen.github.io/repl-yell/posts/sbcl-fibers/)
+- [GitHub - xodn348/han: A compiled programming language with Korean keywords, written in Rust](https://github.com/xodn348/han)
+`;
+function renderMarkdown(md) {
+  if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+    marked.setOptions({ breaks: true });
+    return DOMPurify.sanitize(marked.parse(md));
+  }
+  var el = document.createElement('pre');
+  el.style.whiteSpace = 'pre-wrap';
+  el.textContent = md;
+  return el.outerHTML;
+}
+document.getElementById('tab-blog').innerHTML = renderMarkdown(blogMd);
+document.getElementById('tab-notes').innerHTML = renderMarkdown(notesMd);
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  if (tab === 'blog') {
+    document.querySelectorAll('.tab-btn')[0].classList.add('active');
+    document.getElementById('tab-blog').classList.add('active');
+  } else {
+    document.querySelectorAll('.tab-btn')[1].classList.add('active');
+    document.getElementById('tab-notes').classList.add('active');
+  }
+}
+</script>
+</body>
+</html>

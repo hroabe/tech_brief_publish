@@ -1,0 +1,164 @@
+{
+  "date": "2026-03-20",
+  "episode_date_local": "2026-03-20",
+  "content_snapshot_date": "2026-03-20",
+  "show_length_sec": 860,
+  "generated_at": "2026-03-19T21:52:37.940911+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-4aa750a3",
+      "title": "Return of the Obra Dinn: spherical mapped dithering for a 1bpp first-person game",
+      "fingerprint": "4aa750a3ae2228007ee60d70863291b3",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-59e32e25",
+      "title": "Employees had to restrain a dancing humanoid robot after it went wild at a California restaurant",
+      "fingerprint": "59e32e2594cf5ba547e24e6c782613c0",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "TechCrunch"
+      ]
+    },
+    {
+      "item_id": "item-fdd83320",
+      "title": "Astral to join OpenAI",
+      "fingerprint": "fdd8332083c4aed9a864c612d81269f8",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-093e4f6e",
+      "title": "10x Data Efficiency - NanoGPT Slowrun",
+      "fingerprint": "093e4f6eeaca8c77e262f5e9c5c361d0",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [
+        "source_intent_promotional"
+      ],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-7514fc13",
+      "title": "GitHub - KittenML/KittenTTS: State-of-the-art TTS model under 25MB 😻",
+      "fingerprint": "7514fc13698d974725dbe646c8533ecc",
+      "score": 52,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-e30c8ce4",
+      "title": "From Oscilloscope to Wireshark",
+      "fingerprint": "e30c8ce45b993480a080475301bbbfd0",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-d98f7aa6",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Scaling Karpathy"
+    },
+    {
+      "item_id": "item-36dc3ffe",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Tesla: Failure of the FSD's degradation detection system [pdf]"
+    },
+    {
+      "item_id": "item-83d3b6f5",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Google details new 24-hour process to sideload unverified Android apps"
+    },
+    {
+      "item_id": "item-0bda257f",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "GitHub - cockpit-project/cockpit: Cockpit is a web-based graphical interface for servers."
+    },
+    {
+      "item_id": "item-2876cf1b",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "EsoLang"
+    },
+    {
+      "item_id": "item-f2865ca4",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Safety Impact"
+    },
+    {
+      "item_id": "item-1b6d3fb9",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "noq, noq, who&#x27;s there?"
+    },
+    {
+      "item_id": "item-058363c8",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "4Chan responds to £520,000 Ofcom fine with AI picture of hamster"
+    },
+    {
+      "item_id": "item-8fe9c607",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "How the Turner twins are mythbusting modern technical apparel"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-20/blog.md",
+    "show_notes_path": "out/2026-03-20/show_notes.md",
+    "script_path": "out/2026-03-20/script_2hosts.md",
+    "audio_path": "out/2026-03-20/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 40,
+        "input_tokens": 35739,
+        "output_tokens": 16401,
+        "cost_usd": 0.117744
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37653,
+        "output_tokens": 7649,
+        "cost_usd": 0.227694
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4610,
+        "cost_usd": 0.05532000000000001
+      }
+    ],
+    "total_cost_usd": 0.400758
+  }
+}

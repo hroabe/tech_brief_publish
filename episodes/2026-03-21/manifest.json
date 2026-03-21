@@ -1,0 +1,166 @@
+{
+  "date": "2026-03-21",
+  "episode_date_local": "2026-03-21",
+  "content_snapshot_date": "2026-03-21",
+  "show_length_sec": 866,
+  "generated_at": "2026-03-20T21:52:20.780796+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-131520d0",
+      "title": "GitHub - MoonshotAI/Attention-Residuals",
+      "fingerprint": "131520d05e3e7e3b71428d988dda8a9c",
+      "score": 55,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-1f47cd9b",
+      "title": "OpenCode",
+      "fingerprint": "1f47cd9b662172b8e514d0a9dec1c896",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [
+        "source_intent_promotional"
+      ],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-21404885",
+      "title": "Our commitment to Windows quality",
+      "fingerprint": "21404885010ab55a562c2bcdc0957077",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-b8defdd4",
+      "title": "France's aircraft carrier located in real time by Le Monde through fitness app",
+      "fingerprint": "b8defdd4f69180ccae2d733a65cbf0d5",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-bb8ccdba",
+      "title": "VisiCalc reconstructed",
+      "fingerprint": "bb8ccdba6d0692bb79777a8442ddff2a",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-e3a4e969",
+      "title": "Show HN: I made an email app inspired by Arc browser",
+      "fingerprint": "e3a4e969a383235f7aa31aa5f510ee27",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [
+        "source_intent_promotional"
+      ],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-2174457c",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "The bespoke software revolution? I&#39;m not buying it."
+    },
+    {
+      "item_id": "item-c91f6faa",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Perl mit AI — Richard Jelinek"
+    },
+    {
+      "item_id": "item-de2cd66a",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Delve – Fake Compliance as a Service"
+    },
+    {
+      "item_id": "item-df72cde0",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "28 April 2025 Blackout"
+    },
+    {
+      "item_id": "item-c9bb6057",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Microsoft rolls back some of its Copilot AI bloat on Windows"
+    },
+    {
+      "item_id": "item-99ed1416",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "NumKong: 2"
+    },
+    {
+      "item_id": "item-f3a965cc",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Home\n   · Safehemo"
+    },
+    {
+      "item_id": "item-4d7deb8d",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "The Los Angeles Aqueduct is Wild &mdash; Practical Engineering"
+    },
+    {
+      "item_id": "item-adca0716",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "A Japanese Glossary of Chopsticks Faux Pas"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-21/blog.md",
+    "show_notes_path": "out/2026-03-21/show_notes.md",
+    "script_path": "out/2026-03-21/script_2hosts.md",
+    "audio_path": "out/2026-03-21/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 40,
+        "input_tokens": 35032,
+        "output_tokens": 15800,
+        "cost_usd": 0.114032
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37167,
+        "output_tokens": 7462,
+        "cost_usd": 0.223431
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4590,
+        "cost_usd": 0.055080000000000004
+      }
+    ],
+    "total_cost_usd": 0.392543
+  }
+}

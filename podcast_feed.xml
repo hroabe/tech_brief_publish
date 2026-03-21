@@ -1,0 +1,459 @@
+<?xml version='1.0' encoding='utf-8'?>
+<rss xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" version="2.0">
+  <channel>
+    <title>Tech News Radio</title>
+    <link>https://hroabe.github.io/tech_brief_publish/</link>
+    <description>毎朝10分で最新テックニュースをAIがお届け</description>
+    <language>ja</language>
+    <copyright>© 2026 Studio Machikita</copyright>
+    <generator>Studio Machikita Podcast Pipeline</generator>
+    <itunes:author>Studio Machikita</itunes:author>
+    <itunes:owner>
+      <itunes:name>Studio Machikita</itunes:name>
+      <itunes:email>contact@example.com</itunes:email>
+    </itunes:owner>
+    <itunes:image href="https://hroabe.github.io/tech_brief_publish/episodes/latest/eyecatch.png" />
+    <itunes:category text="Technology">
+      <itunes:category text="Tech News" />
+    </itunes:category>
+    <itunes:explicit>false</itunes:explicit>
+    <item>
+      <title>Tech News Radio - 2026-03-22</title>
+      <description># Tech News Radio Show Notes - #015 (2026-03-22)
+
+## エピソード情報
+- **エピソード**: #015
+- **日付**: 2026-03-22
+- **尺**: 約 14 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Thinking Fast, Slow, and Artificial: How AI Is Reshaping Human Reasoning](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6097646)
+- [tinygrad: A simple and powerful neural network framework](https://tinygrad.org/#tinybox)
+- [Omnilingual MT: Machine Translation for 1,600 Languages | Research](https://ai.meta.com/research/publications/omnilingual-mt-machine-translation-for-1600-languages/?_fb_noscript=1)
+
+### 注目の深掘り
+- [How ZJIT removes redundant object loads and stores](https://railsatscale.com/2026-03-18-how-zjit-removes-redundant-object-loads-and-stores/)
+
+### 小ネタ・その他
+- [Grafeo - High-Performance Graph Database](https://grafeo.dev/)
+- [Some Things Just Take Time](https://lucumr.pocoo.org/2026/3/20/some-things-just-take-time/)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-22/episode_audio.mp3" length="13574445" type="audio/mpeg" />
+      <pubDate>Sun, 22 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-22</guid>
+      <itunes:duration>14:08</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-21</title>
+      <description># Tech News Radio Show Notes - #014 (2026-03-21)
+
+## エピソード情報
+- **エピソード**: #014
+- **日付**: 2026-03-21
+- **尺**: 約 14 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [GitHub - MoonshotAI/Attention-Residuals](https://github.com/MoonshotAI/Attention-Residuals)
+- [OpenCode](https://opencode.ai/)
+- [France's aircraft carrier located in real time by Le Monde through fitness app](https://www.lemonde.fr/en/international/article/2026/03/20/stravaleaks-france-s-aircraft-carrier-located-in-real-time-by-le-monde-through-fitness-app_6751640_4.html)
+
+### 注目の深掘り
+- [Our commitment to Windows quality](https://blogs.windows.com/windows-insider/2026/03/20/our-commitment-to-windows-quality/)
+
+### 小ネタ・その他
+- [VisiCalc reconstructed](https://zserge.com/posts/visicalc/)
+- [Show HN: I made an email app inspired by Arc browser](https://demo.define.app)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-21/episode_audio.mp3" length="13863213" type="audio/mpeg" />
+      <pubDate>Sat, 21 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-21</guid>
+      <itunes:duration>14:26</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-20</title>
+      <description># Tech News Radio Show Notes - #013 (2026-03-20)
+
+## エピソード情報
+- **エピソード**: #013
+- **日付**: 2026-03-20
+- **尺**: 約 14 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Astral to join OpenAI](https://astral.sh/blog/openai)
+- [10x Data Efficiency - NanoGPT Slowrun](https://qlabs.sh/10x)
+- [GitHub - KittenML/KittenTTS: State-of-the-art TTS model under 25MB 😻](https://github.com/KittenML/KittenTTS)
+
+### 注目の深掘り
+- [From Oscilloscope to Wireshark](https://www.mattkeeter.com/blog/2022-08-11-udp/)
+
+### 小ネタ・その他
+- [Return of the Obra Dinn: spherical mapped dithering for a 1bpp first-person game](https://forums.tigsource.com/index.php?topic=40832.msg1363742#msg1363742)
+- [Employees had to restrain a dancing humanoid robot after it went wild at a California restaurant](https://techcrunch.com/2026/03/19/restaurant-dancing-robot-went-wild-hot-pot-cupertino-haidilao-agibot/)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-20/episode_audio.mp3" length="13774125" type="audio/mpeg" />
+      <pubDate>Fri, 20 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-20</guid>
+      <itunes:duration>14:20</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-19</title>
+      <description># Tech News Radio Show Notes - #012 (2026-03-19)
+
+## エピソード情報
+- **エピソード**: #012
+- **日付**: 2026-03-19
+- **尺**: 約 12 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [2025 Turing award given for quantum information science](https://awards.acm.org/about/2025-turing)
+- [2025 Turing award given for quantum information science](https://www.wired.com/story/a-quantum-leap-for-the-turing-award/)
+- [Nothing CEO Carl Pei says smartphone apps will disappear as AI agents take their place](https://techcrunch.com/2026/03/18/nothing-ceo-carl-pei-says-smartphone-apps-will-disappear-as-ai-agents-take-their-place/)
+- [Introducing the Machine Payments Protocol](https://stripe.com/blog/machine-payments-protocol)
+
+### 注目の深掘り
+- [Rob Pike’s Rules of Programming (1989)](https://www.cs.unc.edu/~stotts/COMP590-059-f24/robsrules.html)
+
+### 小ネタ・その他
+- [OpenRocket Simulator](https://openrocket.info/)
+- [Wander the Web](https://susam.net/wander/)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-19/episode_audio.mp3" length="12224301" type="audio/mpeg" />
+      <pubDate>Thu, 19 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-19</guid>
+      <itunes:duration>12:43</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-17</title>
+      <description># Tech News Radio Show Notes - #011 (2026-03-17)
+
+## エピソード情報
+- **エピソード**: #011
+- **日付**: 2026-03-17
+- **尺**: 約 12 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Samsung bets this island startup can tame the grid with software and batteries](https://techcrunch.com/2026/03/16/samsung-bets-this-island-startup-can-tame-the-grid-with-software-and-batteries/)
+- [Chamber | Your AIOps Teammate for GPU Infrastructure](https://www.usechamber.io/)
+- [Investing in Infrastructure: Meta’s Renewed Commitment to jemalloc](https://engineering.fb.com/2026/03/02/data-infrastructure/investing-in-infrastructure-metas-renewed-commitment-to-jemalloc/)
+
+### 注目の深掘り
+- [Language Model Teams as Distributed Systems](https://arxiv.org/abs/2603.12229)
+
+### 小ネタ・その他
+- [My Journey to a reliable and enjoyable locally hosted voice assistant](https://community.home-assistant.io/t/my-journey-to-a-reliable-and-enjoyable-locally-hosted-voice-assistant/944860)
+- [Why I Love FreeBSD](https://it-notes.dragas.net/2026/03/16/why-i-love-freebsd/)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-17/episode_audio.mp3" length="11662893" type="audio/mpeg" />
+      <pubDate>Tue, 17 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-17</guid>
+      <itunes:duration>12:08</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-16</title>
+      <description># Tech News Radio Show Notes - #010 (2026-03-16)
+
+## エピソード情報
+- **エピソード**: #010
+- **日付**: 2026-03-16
+- **尺**: 約 10 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Electric motor scaling laws and inertia in robot actuators](https://robot-daycare.com/posts/actuation_series_1/)
+- [LLM Architecture Gallery](https://sebastianraschka.com/llm-architecture-gallery/)
+- [How I write software with LLMs](https://www.stavros.io/posts/how-i-write-software-with-llms/)
+
+### 注目の深掘り
+- [Separating the Wayland Compositor and Window Manager](https://isaacfreund.com/blog/river-window-management/)
+
+### 小ネタ・その他
+- [Lies I was Told About Collaborative Editing, Part 2: Why we don&amp;#x27;t use Yjs / Moment devlog](https://www.moment.dev/blog/lies-i-was-told-pt-2)
+- [The 49MB Web Page](https://thatshubham.com/blog/news-audit)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-16/episode_audio.mp3" length="9655725" type="audio/mpeg" />
+      <pubDate>Mon, 16 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-16</guid>
+      <itunes:duration>10:03</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-15</title>
+      <description># Tech News Radio Show Notes - #009 (2026-03-15)
+
+## エピソード情報
+- **エピソード**: #009
+- **日付**: 2026-03-15
+- **尺**: 約 10 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [MCP is Dead; Long Live MCP!](https://chrlschn.dev/blog/2026/03/mcp-is-dead-long-live-mcp/)
+- [Tree Search Distillation for Language Models using PPO](https://ayushtambde.com/blog/tree-search-distillation-for-language-models-using-ppo/)
+- [Mathematics Distillation Challenge &amp;#8211; Equational Theories](https://terrytao.wordpress.com/2026/03/13/mathematics-distillation-challenge-equational-theories/)
+
+### 注目の深掘り
+- [A most elegant TCP hole punching algorithm &amp;mdash; Aul Ma&amp;#39;s research facility](https://robertsdotpm.github.io/cryptography/tcp_hole_punching.html)
+
+### 小ネタ・その他
+- [SBCL Fibers: Lightweight Cooperative Threads](https://atgreen.github.io/repl-yell/posts/sbcl-fibers/)
+- [GitHub - xodn348/han: A compiled programming language with Korean keywords, written in Rust](https://github.com/xodn348/han)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-15/episode_audio.mp3" length="9968301" type="audio/mpeg" />
+      <pubDate>Sun, 15 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-15</guid>
+      <itunes:duration>10:22</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-14</title>
+      <description># Tech News Radio Show Notes - #008 (2026-03-14)
+
+## エピソード情報
+- **エピソード**: #008
+- **日付**: 2026-03-14
+- **尺**: 約 9 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [1M context is now generally available for Opus 4.6 and Sonnet 4.6 | Claude](https://claude.com/blog/1m-context-ga)
+- [1M context is now generally available for Opus 4.6 and Sonnet 4.6 | Claude](https://www.anthropic.com/news/claude-sonnet-4-6)
+- [Optimizing Content for Agents](https://cra.mr/optimizing-content-for-agents/)
+- [CanIRun.ai — Can your machine run AI models?](https://www.canirun.ai/)
+
+### 注目の深掘り
+- [Emacs and Vim in the Age of AI](https://batsov.com/articles/2026/03/09/emacs-and-vim-in-the-age-of-ai/)
+
+### 小ネタ・その他
+- [GitHub - Hammerspoon/hammerspoon: Staggeringly powerful macOS desktop automation with Lua](https://github.com/Hammerspoon/hammerspoon)
+- [Parallels Confirms MacBook Neo Can Run Windows in a Virtual Machine](https://www.macrumors.com/2026/03/13/macbook-neo-runs-windows-11-vm/)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-14/episode_audio.mp3" length="8878125" type="audio/mpeg" />
+      <pubDate>Sat, 14 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-14</guid>
+      <itunes:duration>9:14</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-13</title>
+      <description># Tech News Radio Show Notes - #007 (2026-03-13)
+
+## エピソード情報
+- **エピソード**: #007
+- **日付**: 2026-03-13
+- **尺**: 約 13 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Can LLMs Be Computers? | Percepta](https://www.percepta.ai/blog/can-llms-be-computers)
+- [Vite 8.0 is out!](https://vite.dev/blog/announcing-vite8)
+- [The Scheduler | Internals for Interns](https://internals-for-interns.com/posts/go-runtime-scheduler/)
+
+### 注目の深掘り
+- [Prefix sums at gigabytes per second with ARM NEON](https://lemire.me/blog/2026/03/08/prefix-sums-at-tens-of-gigabytes-per-second-with-arm-neon/)
+
+### 小ネタ・その他
+- [Bucketsquatting is (Finally) Dead – One Cloud Please](https://onecloudplease.com/blog/bucketsquatting-is-finally-dead)
+- [Hyperlinks in Terminal Emulators](https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-13/episode_audio.mp3" length="12745773" type="audio/mpeg" />
+      <pubDate>Fri, 13 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-13</guid>
+      <itunes:duration>13:16</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-12</title>
+      <description># Tech News Radio Show Notes - #006 (2026-03-12)
+
+## エピソード情報
+- **エピソード**: #006
+- **日付**: 2026-03-12
+- **尺**: 約 10 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Making WebAssembly a first-class language on the Web](https://hacks.mozilla.org/2026/02/making-webassembly-a-first-class-language-on-the-web/)
+- [Temporal: The 9-year journey to fix time in JavaScript](https://bloomberg.github.io/js-blog/post/temporal/)
+- [Thinnings: Sublist Witnesses and de Bruijn Index Shift Clumping](https://www.philipzucker.com/thin1/)
+
+### 注目の深掘り
+- [Are LLMs not getting better?](https://entropicthoughts.com/no-swe-bench-improvement)
+
+### 小ネタ・その他
+- [Returning to Rails in 2026](https://www.markround.com/blog/2026/03/05/returning-to-rails-in-2026/)
+- [I was interviewed by an AI bot for a job](https://www.theverge.com/featured-video/892850/i-was-interviewed-by-an-ai-bot-for-a-job)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-12/episode_audio.mp3" length="11889837" type="audio/mpeg" />
+      <pubDate>Thu, 12 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-12</guid>
+      <itunes:duration>10:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-11</title>
+      <description># Tech News Radio Show Notes - #005 (2026-03-11)
+
+## エピソード情報
+- **エピソード**: #005
+- **日付**: 2026-03-11
+- **尺**: 約 10 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Yann LeCun raises $1B to build AI that understands the physical world](https://www.wired.com/story/yann-lecun-raises-dollar1-billion-to-build-ai-that-understands-the-physical-world/)
+- [Agents that run while I sleep](https://www.claudecodecamp.com/p/i-m-building-agents-that-run-while-i-sleep)
+- [TADA: Fast, Reliable Speech Generation Through Text-Acoustic Synchronization](https://www.hume.ai/blog/opensource-tada)
+
+### 注目の深掘り
+- [AutoKernel: Autoresearch for GPU Kernels](https://github.com/RightNow-AI/autokernel)
+
+### 小ネタ・その他
+- [RISC-V Is Sloooow](https://marcin.juszkiewicz.com.pl/2026/03/10/risc-v-is-sloooow/)
+- [Cloudflare crawl endpoint](https://developers.cloudflare.com/changelog/post/2026-03-10-br-crawl-endpoint/)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-11/episode_audio.mp3" length="12285357" type="audio/mpeg" />
+      <pubDate>Wed, 11 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-11</guid>
+      <itunes:duration>10:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-10</title>
+      <description># Tech News Radio Show Notes - #004 (2026-03-09)
+
+## エピソード情報
+- **エピソード**: #004
+- **日付**: 2026-03-09
+- **尺**: 約 10 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [DARPA's new X-76](https://www.darpa.mil/news/2026/darpa-new-x-76-speed-of-jet-freedom-of-helicopter)
+- [Things I've Done with AI](https://sjer.red/blog/2026/built-with-ai/)
+- [Things I've Done with AI](https://www.technologyreview.com/2026/03/06/1133989/the-download-10-things-that-matter-in-ai-anthropics-plan-sue-pentagon/)
+- [Rethinking Syntax: Binding by Adjacency](https://github.com/manifold-systems/manifold/blob/master/docs/articles/binding_exprs.md)
+
+### 注目の深掘り
+- [JSLinux Now Supports x86_64](https://bellard.org/jslinux/)
+
+### 小ネタ・その他
+- [Building a Procedural Hex Map with Wave Function Collapse](https://felixturner.github.io/hex-map-wfc/article/)
+- [Show HN: The Mog Programming Language](https://moglang.org)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-10/episode_audio.mp3" length="11535405" type="audio/mpeg" />
+      <pubDate>Tue, 10 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-10</guid>
+      <itunes:duration>10:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-09</title>
+      <description># Tech News Radio Show Notes - #003 (2026-03-08)
+
+## エピソード情報
+- **エピソード**: #003
+- **日付**: 2026-03-08
+- **尺**: 約 10 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Living human brain cells play DOOM on a CL1 [video]](https://www.youtube.com/watch?v=yRV8fSw6HaE)
+- [Artificial-life: A simple (300 lines of code) reproduction of Computational Life](https://github.com/Rabrg/artificial-life)
+- [Neural Boids](https://campedersen.com/noid)
+
+### 注目の深掘り
+- [Agent Safehouse – macOS-native sandboxing for local agents](https://agent-safehouse.dev/)
+
+### 小ネタ・その他
+- [We should revisit literate programming in the agent era](https://silly.business/blog/we-should-revisit-literate-programming-in-the-agent-era/)
+- [Pushing and Pulling: Three reactivity algorithms](https://jonathan-frere.com/posts/reactivity-algorithms/)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-09/episode_audio.mp3" length="12428973" type="audio/mpeg" />
+      <pubDate>Mon, 09 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-09</guid>
+      <itunes:duration>10:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+    <item>
+      <title>Tech News Radio - 2026-03-08</title>
+      <description># Tech News Radio Show Notes - #002 (2026-03-08)
+
+## エピソード情報
+- **エピソード**: #002
+- **日付**: 2026-03-08
+- **尺**: 約 10 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [A roadmap for AI, if anyone will listen](https://techcrunch.com/2026/03/07/a-roadmap-for-ai-if-anyone-will-listen/)
+- [SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via CI](https://arxiv.org/abs/2603.03823)
+- [How to run Qwen 3.5 locally](https://unsloth.ai/docs/models/qwen3.5)
+
+### 注目の深掘り
+- [Show HN: Eyot, A programming language where the GPU is just another thread](https://cowleyforniastudios.com/2026/03/08/announcing-eyot/)
+- [Show HN: Eyot, A programming language where the GPU is just another thread](https://strlen.com/lobster/)
+
+### 小ネタ・その他
+- [A decade of Docker containers](https://cacm.acm.org/research/a-decade-of-docker-containers/)
+- [Notes on Writing WASM](https://notes.brooklynzelenka.com/Blog/Notes-on-Writing-Wasm)
+</description>
+      <enclosure url="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-08/episode_audio.mp3" length="12474285" type="audio/mpeg" />
+      <pubDate>Sun, 08 Mar 2026 00:00:00 +0000</pubDate>
+      <guid isPermaLink="false">Studio Machikita-2026-03-08</guid>
+      <itunes:duration>10:00</itunes:duration>
+      <itunes:explicit>false</itunes:explicit>
+    </item>
+  </channel>
+</rss>

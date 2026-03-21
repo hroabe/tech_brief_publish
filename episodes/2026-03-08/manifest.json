@@ -1,0 +1,125 @@
+{
+  "date": "2026-03-08",
+  "show_length_sec": 600,
+  "generated_at": "2026-03-08T12:50:22.651002+00:00",
+  "picks": [
+    {
+      "item_id": "item-511cd6e6",
+      "title": "Show HN: Eyot, A programming language where the GPU is just another thread",
+      "fingerprint": "511cd6e62ab378809f7d82529b2caba6",
+      "score": 78,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top",
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-02954ce9",
+      "title": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via CI",
+      "fingerprint": "02954ce92cc678558cc15cd55d546905",
+      "score": 75,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-b0fea950",
+      "title": "How to run Qwen 3.5 locally",
+      "fingerprint": "b0fea950b1086275cddc9e76e016b637",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-c01aad66",
+      "title": "A decade of Docker containers",
+      "fingerprint": "c01aad662d4e3d4d6181e30abcfd1ba2",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-575cf9be",
+      "title": "A roadmap for AI, if anyone will listen",
+      "fingerprint": "575cf9be1cda5fc8cbe8c911fa679492",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "TechCrunch"
+      ]
+    },
+    {
+      "item_id": "item-c2b5679b",
+      "title": "Notes on Writing WASM",
+      "fingerprint": "c2b5679bb769a45b1a7e2f8e5dce8590",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-4288c179",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-bf4b3fde",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-14f1abf9",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-f45282c0",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-8ad2f673",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-49d07b45",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-e0900914",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-40aa2506",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-556bfbdf",
+      "reason": "Ranked too low (skip bucket)."
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-08/blog.md",
+    "show_notes_path": "out/2026-03-08/show_notes.md",
+    "script_path": "out/2026-03-08/script_2hosts.md",
+    "audio_path": "out/2026-03-08/episode_audio.wav",
+    "cover_art_path": "out/2026-03-08/cover_art.png"
+  }
+}

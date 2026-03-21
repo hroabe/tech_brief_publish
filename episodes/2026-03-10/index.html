@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech News Radio - 2026-03-10</title>
+<style>:root {
+  --bg: #121212;
+  --surface: #1E1E1E;
+  --surface-strong: #252525;
+  --border: rgba(255, 255, 255, 0.05);
+  --text: #E0E0E0;
+  --text-muted: #A0A0A0;
+  --accent: #00D8FF;
+  --accent-light: #6C8AFF;
+  --accent-soft: rgba(0, 216, 255, 0.1);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --strong: #fff;
+  --border-radius: 12px;
+}
+[data-theme="light"] {
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --surface-strong: #f0f0f0;
+  --border: rgba(0, 0, 0, 0.08);
+  --text: #1a1a1a;
+  --text-muted: #666666;
+  --accent: #0099b3;
+  --accent-light: #5060c0;
+  --accent-soft: rgba(0, 153, 179, 0.08);
+  --success: #059669;
+  --warning: #d97706;
+  --strong: #000;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, input, textarea, select { font: inherit; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px 80px; }
+
+/* Header */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+  margin-bottom: 0;
+}
+header .container { padding: 24px 20px; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header h1 a { color: var(--strong); }
+header h1 a:hover { text-decoration: none; }
+header p { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem; }
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: var(--strong); text-decoration: none; }
+.theme-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.35rem 0.6rem;
+  line-height: 1;
+  transition: background 0.3s, border-color 0.3s;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+
+/* Section titles */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--strong);
+  letter-spacing: 0.05em;
+}
+.section-subtitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  color: var(--strong);
+}
+.section-desc {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+}
+
+/* Grid layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.col-half { width: calc(50% - 12px); }
+.col-full { width: 100%; }
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 216, 255, 0.3);
+}
+[data-theme="light"] .card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 153, 179, 0.3);
+}
+.card h2 {
+  font-size: 1.25rem;
+  color: var(--strong);
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card ul { list-style: none; padding-left: 0; margin: 0; }
+.card li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.card li:last-child { margin-bottom: 0; }
+.list-check li::before { content: '\2713'; position: absolute; left: 0; color: var(--accent); font-weight: bold; font-size: 1.1em; }
+.list-arrow li::before { content: '\2794'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.9em; top: 0.1em; }
+.list-dot li::before { content: '\25A0'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.6em; top: 0.5em; }
+
+/* Hero card */
+.hero-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-size: 1.5rem;
+  color: var(--strong);
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.hero-description {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+.hero-description:last-of-type { margin-bottom: 24px; }
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hero-pill {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(0, 216, 255, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+[data-theme="light"] .hero-pill {
+  border-color: rgba(0, 153, 179, 0.3);
+}
+
+/* RSS link */
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+.rss-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Episode list & cards */
+.episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.episode-card {
+  display: block;
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.episode-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 216, 255, 0.3);
+  text-decoration: none;
+}
+[data-theme="light"] .episode-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 153, 179, 0.3);
+}
+.episode-card:hover .episode-title {
+  color: var(--accent);
+}
+.episode-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.episode-title {
+  font-size: 1.15rem;
+  color: var(--accent-light);
+  margin: 0 0 12px 0;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+.episode-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Content card (markdown pages) */
+.content-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.content-card h1 { font-size: 1.8rem; font-weight: bold; color: var(--strong); margin-bottom: 8px; letter-spacing: 0.05em; }
+.content-card h2 { font-size: 1.25rem; color: var(--strong); margin-top: 28px; margin-bottom: 16px; }
+.content-card h3 { font-size: 1.05rem; color: var(--accent-light); margin-top: 20px; margin-bottom: 8px; }
+.content-card p { margin-bottom: 12px; color: var(--text); }
+.content-card ul, .content-card ol { margin-left: 1.5rem; margin-bottom: 12px; }
+.content-card li { margin-bottom: 6px; }
+
+/* Notice card */
+.notice-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 24px;
+  margin-top: 32px;
+}
+.notice-card h2 {
+  font-size: 1.25rem;
+  color: var(--accent-light);
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(108, 138, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.notice-card h3 {
+  font-size: 1rem;
+  color: var(--accent-light);
+  margin-bottom: 12px;
+}
+.notice-card ul { list-style: none; padding-left: 0; margin: 0; }
+.notice-card li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+.notice-card li::before {
+  content: '\25A0';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.6em;
+  top: 0.5em;
+}
+.notice-card li:last-child { margin-bottom: 0; }
+
+/* Pagination */
+.page-heading {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--strong);
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.pagination a,
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.88rem;
+}
+.pagination a:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.pagination .current {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.pagination .summary {
+  min-width: auto;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+}
+
+/* Episode page */
+.episode-page .cover {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  display: block;
+}
+.episode-page audio {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.episode-page .content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.episode-page .content h1 { font-size: 1.4rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; color: var(--strong); }
+.episode-page .content h2 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--accent-light); }
+.episode-page .content h3 { font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+.episode-page .content p { margin-bottom: 0.75rem; }
+.episode-page .content ul, .episode-page .content ol { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+.episode-page .content li { margin-bottom: 0.3rem; }
+.episode-page .content strong { color: var(--strong); }
+.episode-page .content em { color: var(--text-muted); }
+.episode-page .content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+.episode-page .content a { word-break: break-all; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  transition: color 0.2s ease;
+  position: relative;
+}
+.tab-btn:hover { color: var(--strong); }
+.tab-btn.active { color: var(--accent); }
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Disclosure list */
+.disclosure-list {
+  list-style: none;
+  margin-left: 0;
+}
+.disclosure-list li {
+  position: relative;
+  padding-left: 1rem;
+}
+.disclosure-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--accent-light);
+}
+
+/* Buttons */
+.button-link,
+.consent-action {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.button-link:hover,
+.consent-action:hover {
+  border-color: var(--accent);
+}
+.button-link.primary,
+.consent-action.primary {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  color: #fff;
+}
+.button-link.primary:hover,
+.consent-action.primary:hover {
+  opacity: 0.85;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-grid {
+  display: flex;
+  gap: 20px;
+}
+.form-grid > div { flex: 1; }
+.contact-form label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--bg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--strong);
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+[data-theme="light"] .contact-form input,
+[data-theme="light"] .contact-form textarea,
+[data-theme="light"] .contact-form select {
+  border-color: var(--border);
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(0, 216, 255, 0.2);
+}
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+.checkbox-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.checkbox-row input { width: auto; }
+.contact-form button {
+  background: var(--accent-light);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  width: 100%;
+}
+.contact-form button:hover { opacity: 0.85; }
+.contact-form button:active { transform: scale(0.98); }
+.fine-print {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Footer */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+.footer-links a,
+.footer-links button {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.footer-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+footer .container { padding: 0 20px; }
+
+/* Consent banner */
+.consent-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1000;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+.consent-banner[hidden] { display: none; }
+.consent-banner h3 {
+  font-size: 1rem;
+  margin-bottom: 0.45rem;
+}
+.consent-banner p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+.consent-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .col-half { width: 100%; }
+  .form-grid { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .container { padding: 20px 16px 60px; }
+  header .container { padding: 16px; }
+  .hero-card,
+  .content-card,
+  .notice-card,
+  .card { padding: 20px; }
+  .episode-page .content { padding: 1.25rem; }
+  .header-row { align-items: flex-start; }
+  .consent-banner { left: 0.75rem; right: 0.75rem; }
+}
+</style>
+<script>
+(function(){
+  var t = localStorage.getItem('theme');
+  if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+})();
+function toggleTheme(){
+  var el = document.documentElement;
+  if (el.getAttribute('data-theme') === 'light') {
+    el.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    el.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  }
+  updateIcon();
+}
+function updateIcon(){
+  var btn = document.getElementById('theme-btn');
+  if (!btn) return;
+  btn.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u263E' : '\u2600';
+}
+document.addEventListener('DOMContentLoaded', updateIcon);
+</script>
+
+<script>
+const PLAUSIBLE_DOMAIN = "";
+const PLAUSIBLE_SCRIPT_SRC = "https://plausible.io/js/script.js";
+const ANALYTICS_CONSENT_KEY = 'site.analyticsConsent';
+
+function loadPlausible() {
+  if (!PLAUSIBLE_DOMAIN) return;
+  if (document.querySelector('script[data-plausible-loader="true"]')) return;
+  var script = document.createElement('script');
+  script.defer = true;
+  script.src = PLAUSIBLE_SCRIPT_SRC;
+  script.setAttribute('data-domain', PLAUSIBLE_DOMAIN);
+  script.setAttribute('data-plausible-loader', 'true');
+  document.head.appendChild(script);
+}
+
+function hideConsentBanner() {
+  var banner = document.getElementById('consent-banner');
+  if (banner) banner.hidden = true;
+}
+
+function showConsentBanner() {
+  var banner = document.getElementById('consent-banner');
+  if (banner) banner.hidden = false;
+}
+
+function updateConsentUi() {
+  if (!PLAUSIBLE_DOMAIN) {
+    hideConsentBanner();
+    return;
+  }
+  var consent = localStorage.getItem(ANALYTICS_CONSENT_KEY);
+  if (consent === 'accepted') {
+    loadPlausible();
+    hideConsentBanner();
+  } else if (consent === 'rejected') {
+    hideConsentBanner();
+  } else {
+    showConsentBanner();
+  }
+}
+
+function acceptAnalyticsConsent() {
+  localStorage.setItem(ANALYTICS_CONSENT_KEY, 'accepted');
+  updateConsentUi();
+}
+
+function rejectAnalyticsConsent() {
+  localStorage.setItem(ANALYTICS_CONSENT_KEY, 'rejected');
+  updateConsentUi();
+}
+
+function openCookieSettings() {
+  if (!PLAUSIBLE_DOMAIN) return;
+  showConsentBanner();
+}
+
+document.addEventListener('DOMContentLoaded', updateConsentUi);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.3.1/dist/purify.min.js" integrity="sha384-80VlBZnyAwkkqtSfg5NhPyZff6nU4K/qniLBL8Jnm4KDv6jZhLiYtJbhglg/i9ww" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@17.0.3/lib/marked.umd.js" integrity="sha384-cYPlWZ3J0Pi4sIKo/Yy2hbXAfqi7S7h4/5xARy+4Aa2brtE1tM7Old55+Y6NkFBW" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-row">
+      <div>
+        <h1><a href="../../index.html">Tech News Radio</a></h1>
+        <p>毎朝、ビジネスパーソンや開発者向けの最新のテックニュースをまとめてお届けします。</p>
+      </div>
+      <button id="theme-btn" class="theme-toggle" onclick="toggleTheme()" title="表示テーマ切り替え"></button>
+    </div>
+    <nav class="nav-links">
+      <a href="../../index.html">Episodes</a>
+      <a href="../../about.html">About</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../podcast_feed.xml">RSS Feed</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container episode-page">
+  
+  <audio controls preload="metadata"><source src="episode_audio.mp3" type="audio/mpeg"></audio>
+
+  <section id="episode-notice" class="notice-card"></section>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('blog')">Blog</button>
+    <button class="tab-btn" onclick="switchTab('notes')">Show Notes</button>
+  </div>
+
+  <div id="tab-blog" class="content tab-content active"></div>
+  <div id="tab-notes" class="content tab-content"></div>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="../../about.html">About</a>
+      <a href="../../policy.html">ポリシー</a>
+      <a href="../../privacy.html">プライバシーポリシー</a>
+      <a href="../../contact.html">お問い合わせ</a>
+      <button type="button" onclick="openCookieSettings()">Cookie設定</button>
+    </div>
+    <p>本サイトのテキストと音声にはAI生成コンテンツを含みます。最終確認は各話の出典リンクから原文をご確認ください。</p>
+    <p>&copy; 2026 Studio Machikita</p>
+  </div>
+</footer>
+
+
+<script>
+(function() {
+  const markdownContent = `### このエピソードについて
+
+- 本ページは公開情報をもとにした要約を含みます。
+- テキストと音声にはAI生成を含み、正確性や最新性は保証しません。
+- 紹介している記事やサービス名等の権利は各権利者に帰属します。
+- 内容に問題がある場合は [お問い合わせページ](../../contact.html) からご連絡ください。`;
+  const renderMode = "default";
+  function renderMarkdown(md) {
+    if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+      marked.setOptions({ breaks: true });
+      return DOMPurify.sanitize(marked.parse(md));
+    }
+    var el = document.createElement('pre');
+    el.style.whiteSpace = 'pre-wrap';
+    el.textContent = md;
+    return el.outerHTML;
+  }
+  const target = document.getElementById('episode-notice');
+  target.innerHTML = renderMarkdown(markdownContent);
+  if (renderMode === 'hero-pills') {
+    var heading = target.querySelector('h2');
+    if (heading) {
+      var h1 = document.createElement('h1');
+      h1.className = 'hero-title';
+      h1.innerHTML = heading.innerHTML;
+      heading.replaceWith(h1);
+    }
+    target.querySelectorAll('p').forEach(function(p) {
+      p.classList.add('hero-description');
+    });
+    var list = target.querySelector('ul');
+    if (list) {
+      var pillWrap = document.createElement('div');
+      pillWrap.className = 'hero-meta';
+      Array.from(list.querySelectorAll('li')).forEach(function(item) {
+        var pill = document.createElement('span');
+        pill.className = 'hero-pill';
+        pill.textContent = item.textContent.trim();
+        pillWrap.appendChild(pill);
+      });
+      list.replaceWith(pillWrap);
+    }
+  }
+})();
+</script>
+
+<script>
+const blogMd = `![Cover Art](./cover_art.png)
+
+# 🎧 Tech News Radio — 2026-03-09
+
+> 📖 読了時間: 約11分 ｜ 🏷️ Hardware, Science, Web, OSS, AI
+
+---
+
+## 📌 今日のハイライト
+- 🔧 **DARPAの新型X-76** — DARPAがジェット速度とヘリ機動性を兼ねた新型機X-76を発表
+- 🌐 **波動関数崩壊を用いた手続き型六角形マップの構築** — WebGPUとWave Function Collapseでヘックスマップを自動生成
+- 📦 **JSLinuxがx86_64をサポート** — JSLinuxがx86_64アーキテクチャに対応
+- 🤖 **AIでやってきたこと** — MIT Technology ReviewがAI活用の最前線を特集
+- 🌐 **隣接性による束縛：統語論の再考** — 隣接性に基づく新しい構文の束縛概念を提唱
+
+---
+
+## 🔧 DARPAの新型X-76
+\`Hardware\` \`Science\`
+
+<details>
+<summary>📄 原題: DARPA's new X-76</summary>
+</details>
+
+> **一言で**: DARPAがジェット速度とヘリ機動性を兼ねた新型機X-76を発表
+
+- 要点1: X-76はジェット機並みの速度とヘリコプター並みの自由な機動性を両立する新型実験機
+- 要点2: DARPAが開発を主導しており、軍事・輸送分野への応用が見込まれる
+- 要点3: 従来の航空機が抱えていた速度と垂直離着陸の両立という課題に挑む設計
+
+💡 **なぜ重要か**
+ヘリコプターは垂直離着陸できる反面、速度に限界があります。一方、ジェット機は高速ですが滑走路が必要です。この二者択一を長年、軍や航空業界は課題としてきました。DARPAはこの壁を破る実験機X-76の開発を進めており、次世代の航空輸送・作戦能力に大きな変化をもたらす可能性があります。 この技術が実用化されれば、軍事作戦だけでなく、災害救助や物流など民間分野にも波及します。滑走路不要で高速移動できる機体は、インフラが整っていない地域でも活躍できるため、航空業界の設計思想そのものが変わるかもしれません。
+
+🎯 **今日のアクション**
+航空・防衛テック分野に関わるエンジニアは、DARPAの公式発表を継続的に追ってください。ハイブリッド推進や空力設計のトレンドが今後の民間航空技術にも影響するため、関連する論文や特許情報も定期的にチェックする価値があります。
+
+🔗 [原文を読む](https://www.darpa.mil/news/2026/darpa-new-x-76-speed-of-jet-freedom-of-helicopter)
+
+---
+
+## 🤖 AIでやってきたこと
+\`AI\` \`LLM\` \`Business\`
+
+<details>
+<summary>📄 原題: Things I've Done with AI</summary>
+</details>
+
+> **一言で**: MIT Technology ReviewがAI活用の最前線を特集
+
+- 要点1: MIT Technology Reviewの平日ニュースレター「The Download」の一編
+- 要点2: 「今注目すべきAIの10トピック」特集が近日公開予定
+- 要点3: 同メディアは長年、重要なAI動向をいち早く追ってきた実績あり
+
+💡 **なぜ重要か**
+MIT Technology Reviewは、AIに関する信頼性の高い報道で知られるメディアです。今回のニュースレターは、AI活用の具体的な事例や動向を読者に届けることを目的としています。AIへの関心が急速に高まる中、質の高いキュレーションメディアの役割はますます重要になっています。 信頼できる情報源がAIの動向を整理・発信することで、エンジニアや意思決定者が正確な知識を基に行動しやすくなります。情報過多の時代に、専門メディアのキュレーション価値は高まると見られています。
+
+🎯 **今日のアクション**
+MIT Technology Reviewのニュースレターを購読し、近日公開の「AIの10トピック」特集をチェックしておくとよいでしょう。AI情報の一次ソースとして活用できます。
+
+🔗 [原文を読む](https://sjer.red/blog/2026/built-with-ai/)
+
+🔗 [原文を読む](https://www.technologyreview.com/2026/03/06/1133989/the-download-10-things-that-matter-in-ai-anthropics-plan-sue-pentagon/)
+
+---
+
+## 🌐 隣接性による束縛：統語論の再考
+\`Web\` \`OSS\`
+
+<details>
+<summary>📄 原題: Rethinking Syntax: Binding by Adjacency</summary>
+</details>
+
+> **一言で**: 隣接性に基づく新しい構文の束縛概念を提唱
+
+- 要点1: 「Binding by Adjacency」という新しい構文解析のアプローチを提案
+- 要点2: 従来の構文理論を見直し、隣接性を束縛の基準とする考え方
+- 要点3: プログラミング言語設計や言語処理に影響を与える可能性
+
+💡 **なぜ重要か**
+プログラミング言語の構文設計は、コードの可読性や表現力に直結する重要なテーマです。従来の束縛（バインディング）の仕組みはスコープやシンボルテーブルに依存することが多く、複雑さを生む原因にもなっていました。「隣接性による束縛」という発想は、その複雑さを整理する新たな視点として注目されているようです。 言語設計の世界に新しい視点が加わることで、将来のプログラミング言語やDSL（ドメイン固有言語）の設計に影響が出る可能性があります。ただし、詳細な内容が不明なため、実際の影響範囲は記事の全文を確認してから判断するのが望ましいです。
+
+🎯 **今日のアクション**
+記事の全文を読み、提唱されている構文モデルの詳細を確認しましょう。言語設計や構文解析に携わるエンジニアは特に注目する価値がありそうです。
+
+🔗 [原文を読む](https://github.com/manifold-systems/manifold/blob/master/docs/articles/binding_exprs.md)
+
+---
+
+## 📦 JSLinuxがx86_64をサポート
+\`OSS\` \`Web\`
+
+<details>
+<summary>📄 原題: JSLinux Now Supports x86_64</summary>
+</details>
+
+> **一言で**: JSLinuxがx86_64アーキテクチャに対応
+
+- ブラウザ上でLinuxを動かすJSLinuxが、x86_64対応を追加
+- 新環境はAVX-512とAPX（新命令セット拡張）をサポート
+- Alpine Linux 3.23.2がコンソール経由で利用可能
+- 既存のx86環境（Alpine/Windows 2000/FreeDOS）も引き続き提供
+
+💡 **なぜ重要か**
+JSLinuxはFabrice Bellardが開発した、ブラウザだけでOSを動かせるJavaScriptエミュレーターです。追加インストール不要で試せる手軽さから、教育・検証用途で根強い人気があります。今回のx86_64対応により、32ビット環境では動かなかった現代的なソフトウェアもブラウザ上で試せるようになります。AVX-512はSIMD（単一命令で複数データを並列処理する仕組み）の拡張規格で、科学計算や機械学習処理の高速化に使われています。 ブラウザだけで64ビットLinux環境を再現できると、開発ツールのデモやハンズオン教材をインフラなしで配布できます。WebAssemblyベースのエミュレーション技術と組み合わせれば、クラウド不要の「その場で試せる」開発体験がさらに広がる可能性があります。
+
+🎯 **今日のアクション**
+教育コンテンツや社内ハンズオンの素材として、JSLinuxのx86_64環境を試してみましょう。環境構築コストを下げたいチームは、ブラウザベースのLinux検証環境として活用できるか評価する価値があります。
+
+🔗 [原文を読む](https://bellard.org/jslinux/)
+
+---
+
+## 🌐 波動関数崩壊を用いた手続き型六角形マップの構築
+\`Web\` \`OSS\`
+
+<details>
+<summary>📄 原題: Building a Procedural Hex Map with Wave Function Collapse</summary>
+</details>
+
+> **一言で**: WebGPUとWave Function Collapseでヘックスマップを自動生成
+
+- 要点1: 4,100枚のヘックスタイルで中世風の島マップを手続き的に生成
+- 要点2: Wave Function Collapse（制約伝播アルゴリズム）とWebGPUを組み合わせて実装
+- 要点3: シード値により毎回異なるが再現性のあるマップ生成を実現
+- 要点4: ライブデモとソースコードをGitHubで公開済み
+
+💡 **なぜ重要か**
+Wave Function Collapse（WFC）は、タイルの隣接制約を満たしながらマップをランダム生成する手法です。ゲーム開発やシミュレーション分野で注目されており、WebGPUというブラウザ向けの新しい低レベルGPU APIと組み合わせることで、高速な手続き生成をWeb上で実現できる点が技術的な見どころです。 WebGPUの普及により、これまでネイティブアプリ専用だった重い計算処理がブラウザ上でも動くようになります。WFCのような制約解決アルゴリズムをGPUで並列処理する事例が増えれば、ゲーム・地図・建築シミュレーションなど幅広い分野のWebアプリが恩恵を受けるでしょう。
+
+🎯 **今日のアクション**
+WebGPUとWFCの組み合わせに興味があるエンジニアは、公開されているソースコードを読んでバックトラッキング処理の実装を確認するのがおすすめです。特にゲーム開発者は、自プロジェクトへの応用を検討する価値があります。
+
+🔗 [原文を読む](https://felixturner.github.io/hex-map-wfc/article/)
+
+---
+
+## 📦 HN公開：プログラミング言語「Mog」を作りました
+\`OSS\` \`DevOps\`
+
+<details>
+<summary>📄 原題: Show HN: The Mog Programming Language</summary>
+</details>
+
+> **一言で**: 新しいプログラミング言語「Mog」がHNに登場
+
+- 要点1: 「Mog」という名の新プログラミング言語がHacker Newsで公開された
+- 要点2: 詳細な仕様や設計思想は記事スニペットからは不明
+- 要点3: 個人または小規模チームによる自作言語の発表と見られる
+
+💡 **なぜ重要か**
+Hacker Newsの「Show HN」投稿は、個人開発者が自作のツールや言語を広くコミュニティに披露する場です。新しいプログラミング言語の開発は、既存言語の課題解決や新しいパラダイムの探求を目的とすることが多く、OSSコミュニティでは定期的に話題になります。ただし今回は詳細情報が乏しく、言語の特徴や用途は現時点では不明です。 詳細情報が不足しているため、業界全体への影響を現時点で判断するのは難しい状況です。ただ、新言語の登場は開発者コミュニティに刺激を与え、言語設計の議論を活性化させる効果があります。注目を集めれば、特定ドメインや用途での採用が進む可能性もあります。
+
+🎯 **今日のアクション**
+公式リポジトリやHacker Newsのコメント欄で設計思想や用途を確認し、興味があれば試用してフィードバックを送るのが良いでしょう。自作言語の設計手法に興味があるエンジニアにとっても学習素材として参考になるかもしれません。
+
+🔗 [原文を読む](https://moglang.org)
+
+---
+
+## 🔗 出典一覧
+- [DARPAの新型X-76](https://www.darpa.mil/news/2026/darpa-new-x-76-speed-of-jet-freedom-of-helicopter)
+- [波動関数崩壊を用いた手続き型六角形マップの構築](https://felixturner.github.io/hex-map-wfc/article/)
+- [JSLinuxがx86_64をサポート](https://bellard.org/jslinux/)
+- [AIでやってきたこと](https://sjer.red/blog/2026/built-with-ai/)
+- [AIでやってきたこと](https://www.technologyreview.com/2026/03/06/1133989/the-download-10-things-that-matter-in-ai-anthropics-plan-sue-pentagon/)
+- [隣接性による束縛：統語論の再考](https://github.com/manifold-systems/manifold/blob/master/docs/articles/binding_exprs.md)
+- [HN公開：プログラミング言語「Mog」を作りました](https://moglang.org)`;
+const notesMd = `# Tech News Radio Show Notes - #004 (2026-03-09)
+
+## エピソード情報
+- **エピソード**: #004
+- **日付**: 2026-03-09
+- **尺**: 約 10 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [DARPA's new X-76](https://www.darpa.mil/news/2026/darpa-new-x-76-speed-of-jet-freedom-of-helicopter)
+- [Things I've Done with AI](https://sjer.red/blog/2026/built-with-ai/)
+- [Things I've Done with AI](https://www.technologyreview.com/2026/03/06/1133989/the-download-10-things-that-matter-in-ai-anthropics-plan-sue-pentagon/)
+- [Rethinking Syntax: Binding by Adjacency](https://github.com/manifold-systems/manifold/blob/master/docs/articles/binding_exprs.md)
+
+### 注目の深掘り
+- [JSLinux Now Supports x86_64](https://bellard.org/jslinux/)
+
+### 小ネタ・その他
+- [Building a Procedural Hex Map with Wave Function Collapse](https://felixturner.github.io/hex-map-wfc/article/)
+- [Show HN: The Mog Programming Language](https://moglang.org)
+`;
+function renderMarkdown(md) {
+  if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+    marked.setOptions({ breaks: true });
+    return DOMPurify.sanitize(marked.parse(md));
+  }
+  var el = document.createElement('pre');
+  el.style.whiteSpace = 'pre-wrap';
+  el.textContent = md;
+  return el.outerHTML;
+}
+document.getElementById('tab-blog').innerHTML = renderMarkdown(blogMd);
+document.getElementById('tab-notes').innerHTML = renderMarkdown(notesMd);
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  if (tab === 'blog') {
+    document.querySelectorAll('.tab-btn')[0].classList.add('active');
+    document.getElementById('tab-blog').classList.add('active');
+  } else {
+    document.querySelectorAll('.tab-btn')[1].classList.add('active');
+    document.getElementById('tab-notes').classList.add('active');
+  }
+}
+</script>
+</body>
+</html>

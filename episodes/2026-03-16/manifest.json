@@ -1,0 +1,160 @@
+{
+  "date": "2026-03-16",
+  "episode_date_local": "2026-03-16",
+  "content_snapshot_date": "2026-03-16",
+  "show_length_sec": 603,
+  "generated_at": "2026-03-16T10:48:59.133192+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-8dc2d23d",
+      "title": "Electric motor scaling laws and inertia in robot actuators",
+      "fingerprint": "8dc2d23df344b328948f90f831ef90a4",
+      "score": 78,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-f14becab",
+      "title": "LLM Architecture Gallery",
+      "fingerprint": "f14becab9680a9aadb3ccfaf2c04839d",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-3f325ba6",
+      "title": "Separating the Wayland Compositor and Window Manager",
+      "fingerprint": "3f325ba60af6a3616534b7a5ef68169f",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-f4a8f796",
+      "title": "Lies I was Told About Collaborative Editing, Part 2: Why we don&#x27;t use Yjs / Moment devlog",
+      "fingerprint": "f4a8f7963e7c7ce838dc770f9ef4a22f",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-bc10a731",
+      "title": "How I write software with LLMs",
+      "fingerprint": "bc10a731d8417ff866b14b798d5f9712",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-cbd7a088",
+      "title": "The 49MB Web Page",
+      "fingerprint": "cbd7a08867398d76b2684d6fe69f5205",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-b1f78962",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Let your Coding Agent debug your browser session with Chrome DevTools MCP &nbsp;|&nbsp; Blog &nbsp;|&nbsp; Chrome for Developers"
+    },
+    {
+      "item_id": "item-7c8b268c",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Home Assistant waters my plants!"
+    },
+    {
+      "item_id": "item-afbc79e5",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "What every computer scientist should know about floating-point arithmetic (1991) [pdf]"
+    },
+    {
+      "item_id": "item-9802f646",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "\"The Linux Programming Interface\" as a university course text"
+    },
+    {
+      "item_id": "item-4124f000",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Kona EV Hacking"
+    },
+    {
+      "item_id": "item-b54e3b64",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Stop Sloppypasta: Don&#39;t paste raw LLM output at people"
+    },
+    {
+      "item_id": "item-f06f68b3",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "LLMs can be absolutely exhausting"
+    },
+    {
+      "item_id": "item-ff327d3e",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "How far can you go with IX Route Servers only?"
+    },
+    {
+      "item_id": "item-d67655a0",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "A Tale of Two Bills: Lawful Access Returns With Changes to Warrantless Access But Dangerous Backdoor Surveillance Risks Remain - Michael Geist"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-16/blog.md",
+    "show_notes_path": "out/2026-03-16/show_notes.md",
+    "script_path": "out/2026-03-16/script_2hosts.md",
+    "audio_path": "out/2026-03-16/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 40,
+        "input_tokens": 35208,
+        "output_tokens": 15646,
+        "cost_usd": 0.113438
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37366,
+        "output_tokens": 7480,
+        "cost_usd": 0.224298
+      }
+    ],
+    "tts": {
+      "chars": 4385,
+      "audio_sec": 570.9,
+      "cost_usd": 0.183239
+    },
+    "openai_tts_details": [],
+    "total_cost_usd": 0.520975
+  }
+}

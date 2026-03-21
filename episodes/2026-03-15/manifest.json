@@ -1,0 +1,160 @@
+{
+  "date": "2026-03-15",
+  "episode_date_local": "2026-03-15",
+  "content_snapshot_date": "2026-03-15",
+  "show_length_sec": 622,
+  "generated_at": "2026-03-15T09:13:11.419834+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-fb5a9209",
+      "title": "SBCL Fibers: Lightweight Cooperative Threads",
+      "fingerprint": "fb5a92092b954931ca8f4f3950ff920b",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-24de4545",
+      "title": "MCP is Dead; Long Live MCP!",
+      "fingerprint": "24de4545e181d959b8bad1a9d61ed0b4",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-5af0e33b",
+      "title": "A most elegant TCP hole punching algorithm &mdash; Aul Ma&#39;s research facility",
+      "fingerprint": "5af0e33b0b9df73216dfd1a0a8cd7bb0",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-f500c442",
+      "title": "Tree Search Distillation for Language Models using PPO",
+      "fingerprint": "f500c44291a2a3cfd63367396ca252f3",
+      "score": 58,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-281bdc0a",
+      "title": "GitHub - xodn348/han: A compiled programming language with Korean keywords, written in Rust",
+      "fingerprint": "281bdc0aae03da21c528f78fdc5a5fd1",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-595f3832",
+      "title": "Mathematics Distillation Challenge &#8211; Equational Theories",
+      "fingerprint": "595f3832ae8bfc4abb4b0e23864bfe1d",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-3a13e460",
+      "reason": "LINK_ONLY: Source classified as satirical: 「年齢が不確定な人間のためのソフトウェア」というコンセプト、「年齢を知りたくない。知る必要もない。法的に聞く必要がある。聞かない」という矛盾した説明、および架空の「California Digital Age Assurance Act」への言及は、年齢確認規制を風刺するパロディコンテンツの特徴を示しています。",
+      "title": "Ageless Linux"
+    },
+    {
+      "item_id": "item-b896f4f0",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "The festival of the machines"
+    },
+    {
+      "item_id": "item-11690b09",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "rack"
+    },
+    {
+      "item_id": "item-accc3260",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "How Kernel Anti-Cheats Work: A Deep Dive into Modern Game Protection"
+    },
+    {
+      "item_id": "item-9c3109a7",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Allow me to get to know you, mistakes and all"
+    },
+    {
+      "item_id": "item-95cb906d",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Why Mathematica does not simplify Sinh[ArcCosh[x]]"
+    },
+    {
+      "item_id": "item-13125373",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Treasure hunter freed from jail after refusing to turn over shipwreck gold"
+    },
+    {
+      "item_id": "item-741fb878",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Bumblebee Queens Breathe Underwater to Survive Drowning, Revealing How They Can Live Submerged for a Week"
+    },
+    {
+      "item_id": "item-bd05cd59",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "How an unappetizing shrub became dozens of different vegetables"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-15/blog.md",
+    "show_notes_path": "out/2026-03-15/show_notes.md",
+    "script_path": "out/2026-03-15/script_2hosts.md",
+    "audio_path": "out/2026-03-15/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 41,
+        "input_tokens": 36566,
+        "output_tokens": 16555,
+        "cost_usd": 0.119341
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 38081,
+        "output_tokens": 7676,
+        "cost_usd": 0.229383
+      }
+    ],
+    "tts": {
+      "chars": 9670,
+      "audio_sec": 602.8,
+      "cost_usd": 0.194103
+    },
+    "openai_tts_details": [],
+    "total_cost_usd": 0.542827
+  }
+}

@@ -1,0 +1,162 @@
+{
+  "date": "2026-03-13",
+  "episode_date_local": "2026-03-13",
+  "content_snapshot_date": "2026-03-13",
+  "show_length_sec": 796,
+  "generated_at": "2026-03-13T09:43:10.645104+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-e0cbbe49",
+      "title": "Vite 8.0 is out!",
+      "fingerprint": "e0cbbe49144073ce98872e7ae554196c",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-55aa38fc",
+      "title": "The Scheduler | Internals for Interns",
+      "fingerprint": "55aa38fc298b74c60881b90b4222a14d",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-27498415",
+      "title": "Prefix sums at gigabytes per second with ARM NEON",
+      "fingerprint": "274984156bfe016c40e1b6724c1ad901",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-b7831aab",
+      "title": "Can LLMs Be Computers? | Percepta",
+      "fingerprint": "b7831aab16fe85647760fb9079f299bd",
+      "score": 55,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-c59890c6",
+      "title": "Bucketsquatting is (Finally) Dead – One Cloud Please",
+      "fingerprint": "c59890c68324580178ea15e934aa0950",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-484b3b1b",
+      "title": "Hyperlinks in Terminal Emulators",
+      "fingerprint": "484b3b1b1084952e6613acb3ee5d7a8a",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-062d9044",
+      "reason": "LINK_ONLY: Source classified as satirical: 「オープンソースライセンス義務からの解放」「法的に異なる」という表現と、AIが「ゼロ帰属」でコードを再構築するという主張は、オープンソース違反を風刺的に描写しており、実際のサービスというより法的・倫理的問題を皮肉ったパロディと判断される。",
+      "title": "MALUS - Clean Room as a Service"
+    },
+    {
+      "item_id": "item-47eeec80",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Enhancing gut-brain communication reversed cognitive decline, improved memory formation in aging mice"
+    },
+    {
+      "item_id": "item-e09acf2a",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "The Met Releases High-Definition 3D Scans of 140 Famous Art Objects: Sarcophagi, Van Gogh Paintings, Marble Sculptures &amp; More"
+    },
+    {
+      "item_id": "item-ce3f348f",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Willingness to look stupid is a genuine moat in creative work"
+    },
+    {
+      "item_id": "item-5c1fc3e8",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "“This Is Not The Computer For You” · Sam Henri Gold"
+    },
+    {
+      "item_id": "item-2773e19f",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Why ATMs didn’t kill bank teller jobs, but the iPhone did"
+    },
+    {
+      "item_id": "item-b8a1c22b",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "gist:291f4388e2de89a43b25c135b44e41f0"
+    },
+    {
+      "item_id": "item-6db39953",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Bubble Sorted Amen Break by Vee 🥑"
+    },
+    {
+      "item_id": "item-1a2231e0",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "IMG_0416"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-13/blog.md",
+    "show_notes_path": "out/2026-03-13/show_notes.md",
+    "script_path": "out/2026-03-13/script_2hosts.md",
+    "audio_path": "out/2026-03-13/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 41,
+        "input_tokens": 36341,
+        "output_tokens": 16078,
+        "cost_usd": 0.116731
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37627,
+        "output_tokens": 7602,
+        "cost_usd": 0.226911
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4584,
+        "cost_usd": 0.055008
+      }
+    ],
+    "total_cost_usd": 0.39865
+  }
+}

@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech News Radio - 2026-03-20</title>
+<style>:root {
+  --bg: #121212;
+  --surface: #1E1E1E;
+  --surface-strong: #252525;
+  --border: rgba(255, 255, 255, 0.05);
+  --text: #E0E0E0;
+  --text-muted: #A0A0A0;
+  --accent: #00D8FF;
+  --accent-light: #6C8AFF;
+  --accent-soft: rgba(0, 216, 255, 0.1);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --strong: #fff;
+  --border-radius: 12px;
+}
+[data-theme="light"] {
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --surface-strong: #f0f0f0;
+  --border: rgba(0, 0, 0, 0.08);
+  --text: #1a1a1a;
+  --text-muted: #666666;
+  --accent: #0099b3;
+  --accent-light: #5060c0;
+  --accent-soft: rgba(0, 153, 179, 0.08);
+  --success: #059669;
+  --warning: #d97706;
+  --strong: #000;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, input, textarea, select { font: inherit; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px 80px; }
+
+/* Header */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+  margin-bottom: 0;
+}
+header .container { padding: 24px 20px; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header h1 a { color: var(--strong); }
+header h1 a:hover { text-decoration: none; }
+header p { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem; }
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: var(--strong); text-decoration: none; }
+.theme-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.35rem 0.6rem;
+  line-height: 1;
+  transition: background 0.3s, border-color 0.3s;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+
+/* Section titles */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--strong);
+  letter-spacing: 0.05em;
+}
+.section-subtitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  color: var(--strong);
+}
+.section-desc {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+}
+
+/* Grid layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.col-half { width: calc(50% - 12px); }
+.col-full { width: 100%; }
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 216, 255, 0.3);
+}
+[data-theme="light"] .card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 153, 179, 0.3);
+}
+.card h2 {
+  font-size: 1.25rem;
+  color: var(--strong);
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card ul { list-style: none; padding-left: 0; margin: 0; }
+.card li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.card li:last-child { margin-bottom: 0; }
+.list-check li::before { content: '\2713'; position: absolute; left: 0; color: var(--accent); font-weight: bold; font-size: 1.1em; }
+.list-arrow li::before { content: '\2794'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.9em; top: 0.1em; }
+.list-dot li::before { content: '\25A0'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.6em; top: 0.5em; }
+
+/* Hero card */
+.hero-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-size: 1.5rem;
+  color: var(--strong);
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.hero-description {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+.hero-description:last-of-type { margin-bottom: 24px; }
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hero-pill {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(0, 216, 255, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+[data-theme="light"] .hero-pill {
+  border-color: rgba(0, 153, 179, 0.3);
+}
+
+/* RSS link */
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+.rss-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Episode list & cards */
+.episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.episode-card {
+  display: block;
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.episode-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 216, 255, 0.3);
+  text-decoration: none;
+}
+[data-theme="light"] .episode-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 153, 179, 0.3);
+}
+.episode-card:hover .episode-title {
+  color: var(--accent);
+}
+.episode-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.episode-title {
+  font-size: 1.15rem;
+  color: var(--accent-light);
+  margin: 0 0 12px 0;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+.episode-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Content card (markdown pages) */
+.content-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.content-card h1 { font-size: 1.8rem; font-weight: bold; color: var(--strong); margin-bottom: 8px; letter-spacing: 0.05em; }
+.content-card h2 { font-size: 1.25rem; color: var(--strong); margin-top: 28px; margin-bottom: 16px; }
+.content-card h3 { font-size: 1.05rem; color: var(--accent-light); margin-top: 20px; margin-bottom: 8px; }
+.content-card p { margin-bottom: 12px; color: var(--text); }
+.content-card ul, .content-card ol { margin-left: 1.5rem; margin-bottom: 12px; }
+.content-card li { margin-bottom: 6px; }
+
+/* Notice card */
+.notice-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 24px;
+  margin-top: 32px;
+}
+.notice-card h2 {
+  font-size: 1.25rem;
+  color: var(--accent-light);
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(108, 138, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.notice-card h3 {
+  font-size: 1rem;
+  color: var(--accent-light);
+  margin-bottom: 12px;
+}
+.notice-card ul { list-style: none; padding-left: 0; margin: 0; }
+.notice-card li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+.notice-card li::before {
+  content: '\25A0';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.6em;
+  top: 0.5em;
+}
+.notice-card li:last-child { margin-bottom: 0; }
+
+/* Pagination */
+.page-heading {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--strong);
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.pagination a,
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.88rem;
+}
+.pagination a:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.pagination .current {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.pagination .summary {
+  min-width: auto;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+}
+
+/* Episode page */
+.episode-page .cover {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  display: block;
+}
+.episode-page audio {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.episode-page .content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.episode-page .content h1 { font-size: 1.4rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; color: var(--strong); }
+.episode-page .content h2 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--accent-light); }
+.episode-page .content h3 { font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+.episode-page .content p { margin-bottom: 0.75rem; }
+.episode-page .content ul, .episode-page .content ol { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+.episode-page .content li { margin-bottom: 0.3rem; }
+.episode-page .content strong { color: var(--strong); }
+.episode-page .content em { color: var(--text-muted); }
+.episode-page .content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+.episode-page .content a { word-break: break-all; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  transition: color 0.2s ease;
+  position: relative;
+}
+.tab-btn:hover { color: var(--strong); }
+.tab-btn.active { color: var(--accent); }
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Disclosure list */
+.disclosure-list {
+  list-style: none;
+  margin-left: 0;
+}
+.disclosure-list li {
+  position: relative;
+  padding-left: 1rem;
+}
+.disclosure-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--accent-light);
+}
+
+/* Buttons */
+.button-link,
+.consent-action {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.button-link:hover,
+.consent-action:hover {
+  border-color: var(--accent);
+}
+.button-link.primary,
+.consent-action.primary {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  color: #fff;
+}
+.button-link.primary:hover,
+.consent-action.primary:hover {
+  opacity: 0.85;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-grid {
+  display: flex;
+  gap: 20px;
+}
+.form-grid > div { flex: 1; }
+.contact-form label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--bg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--strong);
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+[data-theme="light"] .contact-form input,
+[data-theme="light"] .contact-form textarea,
+[data-theme="light"] .contact-form select {
+  border-color: var(--border);
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(0, 216, 255, 0.2);
+}
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+.checkbox-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.checkbox-row input { width: auto; }
+.contact-form button {
+  background: var(--accent-light);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  width: 100%;
+}
+.contact-form button:hover { opacity: 0.85; }
+.contact-form button:active { transform: scale(0.98); }
+.fine-print {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Footer */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+.footer-links a,
+.footer-links button {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.footer-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+footer .container { padding: 0 20px; }
+
+/* Consent banner */
+.consent-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1000;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+.consent-banner[hidden] { display: none; }
+.consent-banner h3 {
+  font-size: 1rem;
+  margin-bottom: 0.45rem;
+}
+.consent-banner p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+.consent-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 650px) {
+  .col-half { width: 100%; }
+  .form-grid { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .container { padding: 20px 16px 60px; }
+  header .container { padding: 16px; }
+  .hero-card,
+  .content-card,
+  .notice-card,
+  .card { padding: 20px; }
+  .episode-page .content { padding: 1.25rem; }
+  .header-row { align-items: flex-start; }
+  .consent-banner { left: 0.75rem; right: 0.75rem; }
+}
+</style>
+<script>
+(function(){
+  var t = localStorage.getItem('theme');
+  if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+})();
+function toggleTheme(){
+  var el = document.documentElement;
+  if (el.getAttribute('data-theme') === 'light') {
+    el.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    el.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  }
+  updateIcon();
+}
+function updateIcon(){
+  var btn = document.getElementById('theme-btn');
+  if (!btn) return;
+  btn.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u263E' : '\u2600';
+}
+document.addEventListener('DOMContentLoaded', updateIcon);
+</script>
+
+<script>
+const PLAUSIBLE_DOMAIN = "";
+const PLAUSIBLE_SCRIPT_SRC = "https://plausible.io/js/script.js";
+const ANALYTICS_CONSENT_KEY = 'site.analyticsConsent';
+
+function loadPlausible() {
+  if (!PLAUSIBLE_DOMAIN) return;
+  if (document.querySelector('script[data-plausible-loader="true"]')) return;
+  var script = document.createElement('script');
+  script.defer = true;
+  script.src = PLAUSIBLE_SCRIPT_SRC;
+  script.setAttribute('data-domain', PLAUSIBLE_DOMAIN);
+  script.setAttribute('data-plausible-loader', 'true');
+  document.head.appendChild(script);
+}
+
+function hideConsentBanner() {
+  var banner = document.getElementById('consent-banner');
+  if (banner) banner.hidden = true;
+}
+
+function showConsentBanner() {
+  var banner = document.getElementById('consent-banner');
+  if (banner) banner.hidden = false;
+}
+
+function updateConsentUi() {
+  if (!PLAUSIBLE_DOMAIN) {
+    hideConsentBanner();
+    return;
+  }
+  var consent = localStorage.getItem(ANALYTICS_CONSENT_KEY);
+  if (consent === 'accepted') {
+    loadPlausible();
+    hideConsentBanner();
+  } else if (consent === 'rejected') {
+    hideConsentBanner();
+  } else {
+    showConsentBanner();
+  }
+}
+
+function acceptAnalyticsConsent() {
+  localStorage.setItem(ANALYTICS_CONSENT_KEY, 'accepted');
+  updateConsentUi();
+}
+
+function rejectAnalyticsConsent() {
+  localStorage.setItem(ANALYTICS_CONSENT_KEY, 'rejected');
+  updateConsentUi();
+}
+
+function openCookieSettings() {
+  if (!PLAUSIBLE_DOMAIN) return;
+  showConsentBanner();
+}
+
+document.addEventListener('DOMContentLoaded', updateConsentUi);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.3.1/dist/purify.min.js" integrity="sha384-80VlBZnyAwkkqtSfg5NhPyZff6nU4K/qniLBL8Jnm4KDv6jZhLiYtJbhglg/i9ww" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@17.0.3/lib/marked.umd.js" integrity="sha384-cYPlWZ3J0Pi4sIKo/Yy2hbXAfqi7S7h4/5xARy+4Aa2brtE1tM7Old55+Y6NkFBW" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-row">
+      <div>
+        <h1><a href="../../index.html">Tech News Radio</a></h1>
+        <p>毎朝、ビジネスパーソンや開発者向けの最新のテックニュースをまとめてお届けします。</p>
+      </div>
+      <button id="theme-btn" class="theme-toggle" onclick="toggleTheme()" title="表示テーマ切り替え"></button>
+    </div>
+    <nav class="nav-links">
+      <a href="../../index.html">Episodes</a>
+      <a href="../../about.html">About</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../podcast_feed.xml">RSS Feed</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container episode-page">
+  <img class="cover" src="eyecatch.png" alt="Cover Art">
+  <audio controls preload="metadata"><source src="episode_audio.mp3" type="audio/mpeg"></audio>
+
+  <section id="episode-notice" class="notice-card"></section>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('blog')">Blog</button>
+    <button class="tab-btn" onclick="switchTab('notes')">Show Notes</button>
+  </div>
+
+  <div id="tab-blog" class="content tab-content active"></div>
+  <div id="tab-notes" class="content tab-content"></div>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="../../about.html">About</a>
+      <a href="../../policy.html">ポリシー</a>
+      <a href="../../privacy.html">プライバシーポリシー</a>
+      <a href="../../contact.html">お問い合わせ</a>
+      <button type="button" onclick="openCookieSettings()">Cookie設定</button>
+    </div>
+    <p>本サイトのテキストと音声にはAI生成コンテンツを含みます。最終確認は各話の出典リンクから原文をご確認ください。</p>
+    <p>&copy; 2026 Studio Machikita</p>
+  </div>
+</footer>
+
+
+<script>
+(function() {
+  const markdownContent = `### このエピソードについて
+
+- 本ページは公開情報をもとにした要約を含みます。
+- テキストと音声にはAI生成を含み、正確性や最新性は保証しません。
+- 紹介している記事やサービス名等の権利は各権利者に帰属します。
+- 内容に問題がある場合は [お問い合わせページ](../../contact.html) からご連絡ください。`;
+  const renderMode = "default";
+  function renderMarkdown(md) {
+    if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+      marked.setOptions({ breaks: true });
+      return DOMPurify.sanitize(marked.parse(md));
+    }
+    var el = document.createElement('pre');
+    el.style.whiteSpace = 'pre-wrap';
+    el.textContent = md;
+    return el.outerHTML;
+  }
+  const target = document.getElementById('episode-notice');
+  target.innerHTML = renderMarkdown(markdownContent);
+  if (renderMode === 'hero-pills') {
+    var heading = target.querySelector('h2');
+    if (heading) {
+      var h1 = document.createElement('h1');
+      h1.className = 'hero-title';
+      h1.innerHTML = heading.innerHTML;
+      heading.replaceWith(h1);
+    }
+    target.querySelectorAll('p').forEach(function(p) {
+      p.classList.add('hero-description');
+    });
+    var list = target.querySelector('ul');
+    if (list) {
+      var pillWrap = document.createElement('div');
+      pillWrap.className = 'hero-meta';
+      Array.from(list.querySelectorAll('li')).forEach(function(item) {
+        var pill = document.createElement('span');
+        pill.className = 'hero-pill';
+        pill.textContent = item.textContent.trim();
+        pillWrap.appendChild(pill);
+      });
+      list.replaceWith(pillWrap);
+    }
+  }
+})();
+</script>
+
+<script>
+const blogMd = `<!--
+---
+title: "Tech News Radio — 2026-03-20"
+subtitle: "「Return of the Obra Dinn」：1bpp一人称視点ゲームのための球面マッピングディザリング / カリフォルニアのレストランで暴走した人..."
+date: "2026-03-20"
+vol: 13
+topics:
+  - Hardware
+  - Science
+  - Web
+  - Robotics
+  - Business
+author: "Hiroki Abe"
+---
+-->
+# 🎧 Tech News Radio — 2026-03-20
+
+> 📖 読了時間: 約12分 ｜ 🏷️ Hardware, Science, Web, Robotics, Business
+
+---
+
+## 📌 今日のハイライト
+- 🤖 **アストラル、OpenAIに参加へ** — PythonツールのAstralがOpenAIに参画
+- 🤖 **10倍のデータ効率 - NanoGPTスローラン** — NanoGPTで学習データ効率を10倍改善に成功
+- 🤖 **GitHub - KittenML/KittenTTS: 25MB未満の最先端TTSモデル 😻** — 25MB以下で動く高精度TTSモデルが登場
+- 🔧 **オシロスコープからWiresharkへ** — オシロスコープからWiresharkでUDPパケットを深掘り
+- 🔧 **「Return of the Obra Dinn」：1bpp一人称視点ゲームのための球面マッピングディザリング** — Obra Dinnの1bitグラフィック技術の解説記事
+- 🦾 **カリフォルニアのレストランで暴走した人型ロボット、従業員が取り押さえる** — 飲食店のダンスロボットが暴走し、従業員が取り押さえる事態に
+
+---
+
+## 🤖 アストラル、OpenAIに参加へ
+\`AI\` \`OSS\` \`Startup\`
+
+<details>
+<summary>📄 原題: Astral to join OpenAI</summary>
+</details>
+
+> **一言で**: PythonツールのAstralがOpenAIに参画
+
+- Astralは「Pythonをより生産的に」をミッションに掲げて創業
+- 高速・堅牢・直感的なPython開発ツールの構築が目標
+- OpenAIへの参画により、そのミッションを次のステージへ
+
+💡 **なぜ重要か**
+AstralはRuffというPython向けの高速リンター（コード品質チェックツール）などで知られる開発ツール企業です。Python開発者の生産性向上に特化したツールチェーンを手がけており、特にRustで実装された高速処理が注目を集めていました。OpenAIはAIモデルの開発だけでなく、その周辺の開発者体験にも力を入れており、Astralの技術・チームはその文脈で高い親和性があると見られています。 OpenAIがPython開発ツールの領域に直接関与することで、AI開発と開発者ツールの統合が加速する可能性があります。将来的には、OpenAIのプラットフォーム上でPython開発体験が大きく変わるかもしれません。一方でAstralのOSSプロジェクトの今後の運営方針が注目されており、コミュニティへの影響も見極める必要があります。
+
+🎯 **今日のアクション**
+RuffなどAstralのOSSツールを使っているチームは、今後のメンテナンス方針やライセンス変更の動向を注視してください。またOpenAIの開発者向けプロダクトの方向性が変わる可能性があるため、Python系のAI開発ツール選定は短期的に様子を見る姿勢も一つの選択肢です。
+
+🔗 [原文を読む](https://astral.sh/blog/openai)
+
+---
+
+## 🤖 10倍のデータ効率 - NanoGPTスローラン
+\`AI\` \`LLM\` \`Science\`
+
+<details>
+<summary>📄 原題: 10x Data Efficiency - NanoGPT Slowrun</summary>
+</details>
+
+> **一言で**: NanoGPTで学習データ効率を10倍改善に成功
+
+- 要点1: 18億パラメータモデルのアンサンブル（合計180億パラメータ）を1億トークンで学習し、通常10億トークン相当の性能を達成
+- 要点2: コンピュートの増加速度がデータの増加速度を大きく上回るため、データ効率の改善が急務になっている
+- 要点3: 現行のスケーリング則（モデル規模と学習データを比例して増やす経験則）では、データ不足が将来の知能向上を制約する可能性がある
+- 要点4: 数週間という短期間でこの成果を達成しており、研究の進展速度が速い
+
+💡 **なぜ重要か**
+大規模言語モデルの学習には膨大なテキストデータが必要ですが、高品質なデータの増加速度はコンピュートの増加速度に追いつけていません。このギャップが今後のAI発展のボトルネックになると懸念されており、同じデータからより多くを学ぶ「データ効率」の研究が注目を集めています。 データ効率が飛躍的に向上すれば、学習データの枯渇問題を緩和でき、より少ないデータで高性能なモデルを構築できるようになります。これはAI開発コストの削減や、データが少ない専門分野へのAI適用拡大につながる可能性があります。一方で、アンサンブル手法による計算コスト増大とのトレードオフも今後の議論になるでしょう。
+
+🎯 **今日のアクション**
+自社のモデル学習パイプラインでデータ効率を測定する指標を整備し、アンサンブル学習や合成データ生成など、データ効率改善の手法を調査・検討しておくことが有益です。また、NanoGPTのような小規模な実験環境で先行して試すことで、大規模適用前にリスクを抑えた検証ができます。
+
+🔗 [原文を読む](https://qlabs.sh/10x)
+
+---
+
+## 🤖 GitHub - KittenML/KittenTTS: 25MB未満の最先端TTSモデル 😻
+\`AI\` \`OSS\`
+
+<details>
+<summary>📄 原題: GitHub - KittenML/KittenTTS: State-of-the-art TTS model under 25MB 😻</summary>
+</details>
+
+> **一言で**: 25MB以下で動く高精度TTSモデルが登場
+
+- KittenML が公開した KittenTTS は、25MB未満という超軽量な音声合成（TTS）モデル
+- モデルサイズを極限まで圧縮しながら、最先端レベルの品質を目指した設計
+- GitHub上でOSSとして公開されており、誰でも利用・検証が可能
+
+💡 **なぜ重要か**
+近年の音声合成モデルは高品質化と引き換えにサイズが膨大になりがちで、エッジデバイスや組み込み環境への展開が難しい状況が続いています。KittenTTS は25MB以下というサイズ制約の中で高品質を実現しようとしており、リソースの限られた環境でも実用的なTTSを使えるようにする試みとして注目されます。 モデルの小型化が進むことで、スマートフォンやIoT機器など、クラウドに依存せずローカルで音声合成を動かせる用途が広がります。オフライン動作やプライバシー保護が求められる場面での活用が現実的になり、TTS技術の普及を後押しする可能性があります。
+
+🎯 **今日のアクション**
+エッジ環境や組み込みデバイスへのTTS導入を検討しているエンジニアは、KittenTTS のGitHubリポジトリを確認し、モデルサイズと品質のトレードオフを自分のユースケースで実際に検証してみる価値があります。
+
+🔗 [原文を読む](https://github.com/KittenML/KittenTTS)
+
+---
+
+## 🔧 オシロスコープからWiresharkへ
+\`Hardware\` \`Web\` \`DevOps\`
+
+<details>
+<summary>📄 原題: From Oscilloscope to Wireshark</summary>
+</details>
+
+> **一言で**: オシロスコープからWiresharkでUDPパケットを深掘り
+
+- 要点1: デスク上のハードウェアが送るUDPパケットを低レイヤーから解析する試み
+- 要点2: UDPはOSIモデルの第4層（トランスポート層）に位置するプロトコル
+- 要点3: オシロスコープ（波形観測器）とWireshark（パケット解析ツール）を組み合わせた実践的アプローチ
+
+💡 **なぜ重要か**
+ネットワークの学習では「パケットを送れた」で終わりがちです。しかし実際のハードウェア開発では、物理信号レベルまで掘り下げる必要が出てきます。オシロスコープで電気信号を確認しながらWiresharkでパケットを追うという手法は、ソフトとハードの境界を理解する上で非常に有効です。 IoTやエッジデバイス開発が広がる中、ソフトウェアエンジニアにも物理層への理解が求められる場面が増えています。こうした「レイヤーをまたいだデバッグ」の知見が広まることで、ハードとソフトの垣根を越えられるエンジニアの育成につながると見られています。
+
+🎯 **今日のアクション**
+自分のデスクにあるハードウェアが何を送受信しているか、Wiresharkで一度キャプチャして確認してみましょう。余裕があればオシロスコープで物理信号も観察すると、ネットワークスタック全体への理解が深まります。
+
+🔗 [原文を読む](https://www.mattkeeter.com/blog/2022-08-11-udp/)
+
+---
+
+## 🔧 「Return of the Obra Dinn」：1bpp一人称視点ゲームのための球面マッピングディザリング
+\`Hardware\` \`Science\` \`Web\`
+
+> ⚠️ **注意**: この記事は情報源が限られているため、内容の正確性を保証できません。必要に応じて一次情報もご確認ください。
+
+<details>
+<summary>📄 原題: Return of the Obra Dinn: spherical mapped dithering for a 1bpp first-person game</summary>
+</details>
+
+> **一言で**: Obra Dinnの1bitグラフィック技術の解説記事
+
+- 要点1: 名作インディーゲーム『Return of the Obra Dinn』の独自グラフィック手法を技術的に解説
+- 要点2: 1bpp（1ビット/ピクセル）という極限まで削ぎ落とした白黒表現を球面マッピングで実現
+- 要点3: ディザリング（擬似階調）技術を活用し、限られた色数で豊かな表現を生み出す手法を紹介
+
+💡 **なぜ重要か**
+『Return of the Obra Dinn』は2018年にリリースされたインディーゲームで、白黒2色のみで構成された独特のビジュアルが高く評価されました。この表現は単なるレトロ風デザインではなく、球面マッピングとディザリングを組み合わせた緻密な技術設計によるものです。ゲームエンジンや描画技術への関心が高まる中、こうした「制約の中の創意工夫」は多くの開発者にとって学びの多いテーマです。 ゲーム開発に限らず、制約された環境下での描画最適化の考え方は組み込みシステムや低スペック端末向けUIにも応用できます。「少ない情報量で豊かな表現を実現する」という発想は、今後のエッジデバイス向けグラフィクス設計にも影響を与える可能性があります。
+
+🎯 **今日のアクション**
+ゲームや映像制作に携わるエンジニアは、ディザリングや球面マッピングの基礎を改めて学ぶ良い機会です。元記事を参照し、制約駆動の設計思想を自分のプロジェクトに取り入れられないか検討してみてください。
+
+🔗 [原文を読む](https://forums.tigsource.com/index.php?topic=40832.msg1363742#msg1363742)
+
+---
+
+## 🦾 カリフォルニアのレストランで暴走した人型ロボット、従業員が取り押さえる
+\`Robotics\` \`Hardware\` \`Business\`
+
+<details>
+<summary>📄 原題: Employees had to restrain a dancing humanoid robot after it went wild at a California restaurant</summary>
+</details>
+
+> **一言で**: 飲食店のダンスロボットが暴走し、従業員が取り押さえる事態に
+
+- カリフォルニア州のHaidilao火鍋店で、ダンス用ヒューマノイドロボットが制御不能に
+- 激しく動き回るロボットを、従業員が手で押さえて止めたと見られる
+- 飲食店でのロボット活用が広がる中、安全管理の課題が浮き彫りに
+
+💡 **なぜ重要か**
+近年、飲食店での配膳・接客ロボット導入が世界的に加速しています。Haidilaoは中国発のグローバル火鍋チェーンで、以前からロボット活用に積極的です。今回のような「エンターテインメント目的」のヒューマノイドロボット導入も増えており、動作の安定性や安全設計が問われる場面が出てきています。 ロボットの商業利用が広がるにつれ、誤動作時の安全確保や緊急停止の仕組みが業界全体の課題になります。特に不特定多数の客がいる飲食店では、ロボットの暴走は怪我や風評被害に直結します。今後、ロボットメーカーや導入企業はフェイルセーフ（安全側への自動停止）設計の強化を迫られるでしょう。
+
+🎯 **今日のアクション**
+ロボット導入を検討するエンジニアやリーダーは、エンターテインメント用途であっても緊急停止ボタンや動作範囲の物理的制限を必ず設計に組み込んでください。また、現場スタッフへの対応訓練も導入前に実施することを強くお勧めします。
+
+🔗 [原文を読む](https://techcrunch.com/2026/03/19/restaurant-dancing-robot-went-wild-hot-pot-cupertino-haidilao-agibot/)
+
+---
+
+## 🔗 出典一覧
+- [「Return of the Obra Dinn」：1bpp一人称視点ゲームのための球面マッピングディザリング](https://forums.tigsource.com/index.php?topic=40832.msg1363742#msg1363742)
+- [カリフォルニアのレストランで暴走した人型ロボット、従業員が取り押さえる](https://techcrunch.com/2026/03/19/restaurant-dancing-robot-went-wild-hot-pot-cupertino-haidilao-agibot/)
+- [アストラル、OpenAIに参加へ](https://astral.sh/blog/openai)
+- [10倍のデータ効率 - NanoGPTスローラン](https://qlabs.sh/10x)
+- [GitHub - KittenML/KittenTTS: 25MB未満の最先端TTSモデル 😻](https://github.com/KittenML/KittenTTS)
+- [オシロスコープからWiresharkへ](https://www.mattkeeter.com/blog/2022-08-11-udp/)`;
+const notesMd = `# Tech News Radio Show Notes - #013 (2026-03-20)
+
+## エピソード情報
+- **エピソード**: #013
+- **日付**: 2026-03-20
+- **尺**: 約 14 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Astral to join OpenAI](https://astral.sh/blog/openai)
+- [10x Data Efficiency - NanoGPT Slowrun](https://qlabs.sh/10x)
+- [GitHub - KittenML/KittenTTS: State-of-the-art TTS model under 25MB 😻](https://github.com/KittenML/KittenTTS)
+
+### 注目の深掘り
+- [From Oscilloscope to Wireshark](https://www.mattkeeter.com/blog/2022-08-11-udp/)
+
+### 小ネタ・その他
+- [Return of the Obra Dinn: spherical mapped dithering for a 1bpp first-person game](https://forums.tigsource.com/index.php?topic=40832.msg1363742#msg1363742)
+- [Employees had to restrain a dancing humanoid robot after it went wild at a California restaurant](https://techcrunch.com/2026/03/19/restaurant-dancing-robot-went-wild-hot-pot-cupertino-haidilao-agibot/)
+`;
+function renderMarkdown(md) {
+  if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+    marked.setOptions({ breaks: true });
+    return DOMPurify.sanitize(marked.parse(md));
+  }
+  var el = document.createElement('pre');
+  el.style.whiteSpace = 'pre-wrap';
+  el.textContent = md;
+  return el.outerHTML;
+}
+document.getElementById('tab-blog').innerHTML = renderMarkdown(blogMd);
+document.getElementById('tab-notes').innerHTML = renderMarkdown(notesMd);
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  if (tab === 'blog') {
+    document.querySelectorAll('.tab-btn')[0].classList.add('active');
+    document.getElementById('tab-blog').classList.add('active');
+  } else {
+    document.querySelectorAll('.tab-btn')[1].classList.add('active');
+    document.getElementById('tab-notes').classList.add('active');
+  }
+}
+</script>
+</body>
+</html>

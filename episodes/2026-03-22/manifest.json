@@ -1,0 +1,164 @@
+{
+  "date": "2026-03-22",
+  "episode_date_local": "2026-03-22",
+  "content_snapshot_date": "2026-03-22",
+  "show_length_sec": 848,
+  "generated_at": "2026-03-21T21:46:27.699642+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-cfafc916",
+      "title": "How ZJIT removes redundant object loads and stores",
+      "fingerprint": "cfafc91635e67ee3a43f55a4570bc423",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-4a4a86ff",
+      "title": "Grafeo - High-Performance Graph Database",
+      "fingerprint": "4a4a86ff51509ecb7f0f4a08fc606f4e",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-96347793",
+      "title": "Omnilingual MT: Machine Translation for 1,600 Languages | Research",
+      "fingerprint": "963477939970e2146b7250a671a2208e",
+      "score": 58,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-76bc4695",
+      "title": "tinygrad: A simple and powerful neural network framework",
+      "fingerprint": "76bc46952974ed461a6a484e5df04d7e",
+      "score": 55,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [
+        "source_intent_promotional"
+      ],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-112b8027",
+      "title": "Thinking Fast, Slow, and Artificial: How AI Is Reshaping Human Reasoning",
+      "fingerprint": "112b80279edfd54fc8a153bf0ba5de1d",
+      "score": 55,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-88ddf640",
+      "title": "Some Things Just Take Time",
+      "fingerprint": "88ddf640a31618db702cdd481cde58d3",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-48444c53",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "How Invisalign Became the World’s Biggest User of 3D Printers"
+    },
+    {
+      "item_id": "item-4ca410f2",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "GitHub - pagel-s/termcraft: Terminal-first 2D sandbox survival in Rust."
+    },
+    {
+      "item_id": "item-76e604ce",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "No Semicolons Needed"
+    },
+    {
+      "item_id": "item-f24ba337",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Do Not Turn Child Protection Into Internet Access Control"
+    },
+    {
+      "item_id": "item-c193dee8",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Revert &quot;userdb: add birthDate field to JSON user records (#40954)&quot; by paramazo · Pull Request #41179 · systemd/systemd"
+    },
+    {
+      "item_id": "item-28e1e756",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "The seven hour explosion nobody could explain"
+    },
+    {
+      "item_id": "item-4de6bb25",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Electronics for Kids, 2nd Edition"
+    },
+    {
+      "item_id": "item-33c819fe",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Huge study finds no evidence cannabis helps anxiety, depression, or PTSD"
+    },
+    {
+      "item_id": "item-c2edb55c",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Hide macOS Tahoe&#039;s Menu Icons With This One Simple Trick - 512 Pixels"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-22/blog.md",
+    "show_notes_path": "out/2026-03-22/show_notes.md",
+    "script_path": "out/2026-03-22/script_2hosts.md",
+    "audio_path": "out/2026-03-22/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 40,
+        "input_tokens": 35543,
+        "output_tokens": 15597,
+        "cost_usd": 0.113528
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37866,
+        "output_tokens": 7785,
+        "cost_usd": 0.230373
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4520,
+        "cost_usd": 0.05424
+      }
+    ],
+    "total_cost_usd": 0.398141
+  }
+}
