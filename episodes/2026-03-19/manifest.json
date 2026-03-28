@@ -1,0 +1,163 @@
+{
+  "date": "2026-03-19",
+  "episode_date_local": "2026-03-19",
+  "content_snapshot_date": "2026-03-19",
+  "show_length_sec": 763,
+  "generated_at": "2026-03-18T22:04:03.764099+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-0f4bef84",
+      "title": "2025 Turing award given for quantum information science",
+      "fingerprint": "0f4bef84df68594ef79138ee2eedb9ea",
+      "score": 75,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top",
+        "Wired"
+      ]
+    },
+    {
+      "item_id": "item-480d7fde",
+      "title": "Introducing the Machine Payments Protocol",
+      "fingerprint": "480d7fde6474acc07b4651a96cf18616",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-2658dacf",
+      "title": "Nothing CEO Carl Pei says smartphone apps will disappear as AI agents take their place",
+      "fingerprint": "2658dacfc34f625a33f1c5e332fb1fdf",
+      "score": 58,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "TechCrunch"
+      ]
+    },
+    {
+      "item_id": "item-134a71ca",
+      "title": "Rob Pike’s Rules of Programming (1989)",
+      "fingerprint": "134a71ca6b83baf08c47a2a551944d1e",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-38fd3418",
+      "title": "OpenRocket Simulator",
+      "fingerprint": "38fd3418b7301902078bfae26875d894",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-beb1a4b3",
+      "title": "Wander the Web",
+      "fingerprint": "beb1a4b3fa0da3a2a488f1f8590677f8",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-fa8728d5",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "GitHub - NVIDIA/NemoClaw: NVIDIA plugin for secure installation of OpenClaw"
+    },
+    {
+      "item_id": "item-4d454bc5",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Federal Cyber Experts Thought Microsoft’s Cloud Was “a Pile of Shit.” They Approved It Anyway."
+    },
+    {
+      "item_id": "item-16264fa1",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "CVE-2026-3888: Important Snap Flaw Enables Local Privilege Escalation to Root"
+    },
+    {
+      "item_id": "item-05da710a",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Warranty Void If Regenerated"
+    },
+    {
+      "item_id": "item-8aa71b77",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "GitHub - ndroo/freeciv.andrewmcgrath.info"
+    },
+    {
+      "item_id": "item-63148a20",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Preface"
+    },
+    {
+      "item_id": "item-b76f849e",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Nightingale — Karaoke from your music library"
+    },
+    {
+      "item_id": "item-c1796804",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "The Samsung Galaxy S26 Ultra Makes Me Wish All Phones Had a Privacy Screen"
+    },
+    {
+      "item_id": "item-05c980be",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Free SVG Backgrounds and Patterns"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-19/blog.md",
+    "show_notes_path": "out/2026-03-19/show_notes.md",
+    "script_path": "out/2026-03-19/script_2hosts.md",
+    "audio_path": "out/2026-03-19/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 40,
+        "input_tokens": 34767,
+        "output_tokens": 15417,
+        "cost_usd": 0.111852
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37131,
+        "output_tokens": 7214,
+        "cost_usd": 0.219603
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4092,
+        "cost_usd": 0.049104
+      }
+    ],
+    "total_cost_usd": 0.380559
+  }
+}

@@ -1,0 +1,168 @@
+{
+  "date": "2026-03-26",
+  "episode_date_local": "2026-03-26",
+  "content_snapshot_date": "2026-03-26",
+  "show_length_sec": 781,
+  "generated_at": "2026-03-25T21:51:31.604511+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-bd5ba9ac",
+      "title": "ARC-AGI-3",
+      "fingerprint": "bd5ba9ac793eab2d9a72f5989ae75f6a",
+      "score": 75,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-bf725dd3",
+      "title": "TurboQuant: Redefining AI efficiency with extreme compression",
+      "fingerprint": "bf725dd3b188968df890bac8db3d940e",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top",
+        "TechCrunch"
+      ]
+    },
+    {
+      "item_id": "item-ece01a64",
+      "title": "Ensu - Ente&#x27;s Local LLM app",
+      "fingerprint": "ece01a64e0a94936492a142f61464637",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [
+        "source_intent_promotional"
+      ],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-6b2a5f5d",
+      "title": "Quantization from the ground up | ngrok blog",
+      "fingerprint": "6b2a5f5d721b69d13aae2dd83f7e8f7c",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-69e6d47c",
+      "title": "Updates to GitHub Copilot interaction data usage policy",
+      "fingerprint": "69e6d47c4febe4f08a99ab25d80c8fb5",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-7e8000f4",
+      "title": "FreeCAD Version 1.1 Released",
+      "fingerprint": "7e8000f432955615bfbf65490440fb1b",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-f8604a88",
+      "reason": "LINK_ONLY: Source classified as satirical: タイトルの「90% of Claude-linked output going to GitHub repos w <2 stars」は、AI生成コードの品質や実用性を皮肉的に批評する風刺的な主張であり、ドメイン「claudescode.dev」も風刺的なパロディサイトの特徴を示しています。",
+      "title": "90% of Claude-linked output going to GitHub repos w <2 stars"
+    },
+    {
+      "item_id": "item-d758e797",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Fight Chat Control"
+    },
+    {
+      "item_id": "item-ea93b361",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Apple randomly closes bug reports unless you “verify” the bug remains unfixed"
+    },
+    {
+      "item_id": "item-b0c61335",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Thoughts on slowing the fuck down"
+    },
+    {
+      "item_id": "item-943082c6",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Supreme Court Sides with Cox in Copyright Fight over Pirated Music"
+    },
+    {
+      "item_id": "item-659caa59",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Earthquake scientists reveal how overplowing weakens soil at experimental farm"
+    },
+    {
+      "item_id": "item-15f7a92d",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Running Tesla Model 3"
+    },
+    {
+      "item_id": "item-7ef81c09",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Rod Prazeres Astrophotography in Project Hail Mary End Credits | || Rod Prazeres \n|| Astrophotography"
+    },
+    {
+      "item_id": "item-db8f0a0a",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "China is mass-producing hypersonic missiles for $99,000"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-26/blog.md",
+    "show_notes_path": "out/2026-03-26/show_notes.md",
+    "script_path": "out/2026-03-26/script_2hosts.md",
+    "audio_path": "out/2026-03-26/episode_audio.wav",
+    "video_full_path": null,
+    "note_draft_path": "out/2026-03-26/note_draft.md",
+    "eyecatch_path": null
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 42,
+        "input_tokens": 35431,
+        "output_tokens": 15109,
+        "cost_usd": 0.110976
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 36980,
+        "output_tokens": 6897,
+        "cost_usd": 0.214395
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4200,
+        "cost_usd": 0.0504
+      }
+    ],
+    "total_cost_usd": 0.375771
+  }
+}

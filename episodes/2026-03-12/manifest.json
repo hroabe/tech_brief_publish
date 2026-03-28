@@ -1,0 +1,150 @@
+{
+  "date": "2026-03-12",
+  "show_length_sec": 600,
+  "generated_at": "2026-03-12T12:45:16.398302+00:00",
+  "picks": [
+    {
+      "item_id": "item-6bb6237d",
+      "title": "Making WebAssembly a first-class language on the Web",
+      "fingerprint": "6bb6237df341059f2fe46f71a1649020",
+      "score": 68,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-a30e94f5",
+      "title": "Temporal: The 9-year journey to fix time in JavaScript",
+      "fingerprint": "a30e94f5ddd04f2a772a053a4c8cd117",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-50da1778",
+      "title": "Thinnings: Sublist Witnesses and de Bruijn Index Shift Clumping",
+      "fingerprint": "50da177802c240600ac830d98ef2cdbc",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-72b855fd",
+      "title": "Are LLMs not getting better?",
+      "fingerprint": "72b855fd30e397a4dd49c98bcfbaff95",
+      "score": 55,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-43a4b2aa",
+      "title": "Returning to Rails in 2026",
+      "fingerprint": "43a4b2aac62ed9a47436444d7bd8901c",
+      "score": 55,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-6621d1d1",
+      "title": "I was interviewed by an AI bot for a job",
+      "fingerprint": "6621d1d137f3862c1bd13484852bf6a2",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-dbf85bef",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-92af0d2f",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-13585469",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-def6cd5c",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-09b2d38b",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-7ed239e8",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-8d481862",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-115b9912",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-29eda6f8",
+      "reason": "Ranked too low (skip bucket)."
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-12/blog.md",
+    "show_notes_path": "out/2026-03-12/show_notes.md",
+    "script_path": "out/2026-03-12/script_2hosts.md",
+    "audio_path": "out/2026-03-12/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 34,
+        "input_tokens": 30706,
+        "output_tokens": 14758,
+        "cost_usd": 0.104496
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 36543,
+        "output_tokens": 7125,
+        "cost_usd": 0.216504
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4252,
+        "cost_usd": 0.051024
+      }
+    ],
+    "total_cost_usd": 0.372024
+  }
+}

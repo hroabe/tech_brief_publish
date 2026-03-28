@@ -1,0 +1,124 @@
+{
+  "date": "2026-03-11",
+  "show_length_sec": 600,
+  "generated_at": "2026-03-11T08:55:36.620012+00:00",
+  "picks": [
+    {
+      "item_id": "item-123e69f8",
+      "title": "Yann LeCun raises $1B to build AI that understands the physical world",
+      "fingerprint": "123e69f8fae19369b0c862ab4861c72c",
+      "score": 75,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-183490ed",
+      "title": "TADA: Fast, Reliable Speech Generation Through Text-Acoustic Synchronization",
+      "fingerprint": "183490ed69b6392431ae64bbe4f9a2d0",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-770f4297",
+      "title": "AutoKernel: Autoresearch for GPU Kernels",
+      "fingerprint": "770f4297ef493bcd2498e1bd875e34a3",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-ecd7c8e2",
+      "title": "RISC-V Is Sloooow",
+      "fingerprint": "ecd7c8e2297242170ff542f09d10ae75",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-75987b05",
+      "title": "Cloudflare crawl endpoint",
+      "fingerprint": "75987b056126ba5ace0e668b56f17531",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-7df14557",
+      "title": "Agents that run while I sleep",
+      "fingerprint": "7df145572d6de86cd219a3b477375bbf",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-75903709",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-e395c717",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-58fde56e",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-5157b38f",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-2b71c59b",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-d701fee6",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-120e485e",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-deee35db",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-b51db7c3",
+      "reason": "Ranked too low (skip bucket)."
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-11/blog.md",
+    "show_notes_path": "out/2026-03-11/show_notes.md",
+    "script_path": "out/2026-03-11/script_2hosts.md",
+    "audio_path": "out/2026-03-11/episode_audio.wav",
+    "cover_art_path": null
+  }
+}

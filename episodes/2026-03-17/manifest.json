@@ -1,0 +1,164 @@
+{
+  "date": "2026-03-17",
+  "episode_date_local": "2026-03-17",
+  "content_snapshot_date": "2026-03-17",
+  "show_length_sec": 728,
+  "generated_at": "2026-03-16T20:21:06.070251+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-6c1a4e38",
+      "title": "Samsung bets this island startup can tame the grid with software and batteries",
+      "fingerprint": "6c1a4e38eb07e47ebdd1b30eec332295",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "TechCrunch"
+      ]
+    },
+    {
+      "item_id": "item-ca0c8ccb",
+      "title": "Investing in Infrastructure: Meta’s Renewed Commitment to jemalloc",
+      "fingerprint": "ca0c8ccb63d376013a1dcca7fb5d5b3f",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-791f5621",
+      "title": "Chamber | Your AIOps Teammate for GPU Infrastructure",
+      "fingerprint": "791f5621cd85a57399f2deb86a7ed5c1",
+      "score": 58,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [
+        "source_intent_promotional"
+      ],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-4633b97b",
+      "title": "Language Model Teams as Distributed Systems",
+      "fingerprint": "4633b97ba8ba77a315a00b9636ca9aab",
+      "score": 55,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-947f0b36",
+      "title": "My Journey to a reliable and enjoyable locally hosted voice assistant",
+      "fingerprint": "947f0b369e0b33cd060874ca8e8c8877",
+      "score": 52,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-dbb747db",
+      "title": "Why I Love FreeBSD",
+      "fingerprint": "dbb747db0af918766bfe8da5dd68c308",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-57b3e260",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Your MCP Server Is Eating Your Context Window. There&#x27;s a Simpler Way"
+    },
+    {
+      "item_id": "item-95b1ffc6",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Kevin Boone: The “small web” is\nbigger than you might think"
+    },
+    {
+      "item_id": "item-8f0d7154",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Tego · Skills Security Index"
+    },
+    {
+      "item_id": "item-d38b2549",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Cert Authorities Check for DNSSEC From Today"
+    },
+    {
+      "item_id": "item-921f81ee",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Starlink Mini as a failover"
+    },
+    {
+      "item_id": "item-575f8cf3",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "US Job Market Visualizer"
+    },
+    {
+      "item_id": "item-803135ff",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Apple acquires video editing software company MotionVFX"
+    },
+    {
+      "item_id": "item-95994c80",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Polymarket gamblers threaten to kill me over Iran missile story"
+    },
+    {
+      "item_id": "item-a222161f",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Frontiers | The price of accountability: corruption erodes social trust more in democracies than in autocracies"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-17/blog.md",
+    "show_notes_path": "out/2026-03-17/show_notes.md",
+    "script_path": "out/2026-03-17/script_2hosts.md",
+    "audio_path": "out/2026-03-17/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 40,
+        "input_tokens": 34901,
+        "output_tokens": 15246,
+        "cost_usd": 0.111131
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37417,
+        "output_tokens": 7335,
+        "cost_usd": 0.222276
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4295,
+        "cost_usd": 0.05154
+      }
+    ],
+    "total_cost_usd": 0.384947
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "date": "2026-03-09",
+  "show_length_sec": 600,
+  "generated_at": "2026-03-09T21:50:10.790578+00:00",
+  "picks": [
+    {
+      "item_id": "item-b31c3b9b",
+      "title": "DARPA's new X-76",
+      "fingerprint": "b31c3b9b459c5cd1b2c57b0e54e6c51f",
+      "score": 75,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-be5f094e",
+      "title": "Building a Procedural Hex Map with Wave Function Collapse",
+      "fingerprint": "be5f094eaa7c6256ac5514dea3c9c389",
+      "score": 68,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-f855a34d",
+      "title": "JSLinux Now Supports x86_64",
+      "fingerprint": "f855a34df834498bfbea7f25111cc4dd",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-3c6e0826",
+      "title": "Things I've Done with AI",
+      "fingerprint": "3c6e0826c4b47218c328f8a1b0fd1d6d",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top",
+        "MIT Technology Review"
+      ]
+    },
+    {
+      "item_id": "item-63b4006a",
+      "title": "Rethinking Syntax: Binding by Adjacency",
+      "fingerprint": "63b4006a12118cd4723b2bac78bdff56",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-06059e41",
+      "title": "Show HN: The Mog Programming Language",
+      "fingerprint": "06059e41d2fc44c319d8d7808454fad7",
+      "score": 52,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-4747e49c",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-10868823",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-7b5e5c9c",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-e8b651b6",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-50bf316e",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-493ba01a",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-cbedfe4b",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-9075eb04",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-e2e4f518",
+      "reason": "Ranked too low (skip bucket)."
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-10/blog.md",
+    "show_notes_path": "out/2026-03-10/show_notes.md",
+    "script_path": "out/2026-03-10/script_2hosts.md",
+    "audio_path": "out/2026-03-10/episode_audio.wav",
+    "cover_art_path": "out/2026-03-10/cover_art.png"
+  }
+}

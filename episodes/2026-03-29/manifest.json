@@ -1,0 +1,166 @@
+{
+  "date": "2026-03-29",
+  "episode_date_local": "2026-03-29",
+  "content_snapshot_date": "2026-03-29",
+  "show_length_sec": 774,
+  "generated_at": "2026-03-28T21:53:14.618042+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-6a7b0687",
+      "title": "The first 40 months of the AI era",
+      "fingerprint": "6a7b06877b1e9dc90bf9f51d8adbb352",
+      "score": 75,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-e72d235b",
+      "title": "I Built an Open-World Engine for the N64 [video]",
+      "fingerprint": "e72d235b536293e03c377071157cfb91",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-14344114",
+      "title": "AI overly affirms users asking for personal advice",
+      "fingerprint": "14344114c7416ca47191437eb32426bd",
+      "score": 55,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top",
+        "TechCrunch"
+      ]
+    },
+    {
+      "item_id": "item-e01c53b2",
+      "title": "GitHub - J-x-Z/cocoa-way: Native macOS Wayland Compositor written in Rust using Smithay. Experience seamless Linux app streaming on macOS without XQuartz.",
+      "fingerprint": "e01c53b2a7d29e1ef3031e87ab8657c3",
+      "score": 52,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-304594aa",
+      "title": "Linux is an interpreter",
+      "fingerprint": "304594aa2e629858009c3e189cb40ea4",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-7d9c691f",
+      "title": "Detecting file changes on macOS with kqueue — Vegard Stikbakke",
+      "fingerprint": "7d9c691ff166c7d541281d58a565a0fc",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-85929371",
+      "reason": "LINK_ONLY: Source intent uncertain: タイトルは技術的に見えますが、スニペットはTwitterのエラーメッセージのみで記事内容が確認できません。「Claude Cycles」という問題名が実在するかどうか、またKnuthの既知の問題かどうかが不明であり、実際の記事内容なしに判定が困難です。",
+      "title": "Further human + AI + proof assistant work on Knuth's \"Claude Cycles\" problem"
+    },
+    {
+      "item_id": "item-516ae323",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "CSS is DOOMed!"
+    },
+    {
+      "item_id": "item-84bcfb0b",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "I decompiled the White House's new app"
+    },
+    {
+      "item_id": "item-31ae6de7",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "AndroWish: undroidwish"
+    },
+    {
+      "item_id": "item-d2f17dfa",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "GitHub - legalize-dev/legalize-es: Spanish legislation as a Git repo — every law is a Markdown file, every reform a commit. 8,600+ laws."
+    },
+    {
+      "item_id": "item-7d319902",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "GitHub - rajko-horvat/OpenCiv1: Open source rewrite of the original Civilization 1 Game designed by Sid Meier and Bruce Shelley in year 1991"
+    },
+    {
+      "item_id": "item-2d18f8a4",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Tick, Tick...Boom! | Jacob Weisberg"
+    },
+    {
+      "item_id": "item-a99dca55",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Cancer"
+    },
+    {
+      "item_id": "item-4e36d775",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Mark Zuckerberg texted Elon Musk to offer help with DOGE"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-29/blog.md",
+    "show_notes_path": "out/2026-03-29/show_notes.md",
+    "script_path": "out/2026-03-29/script_2hosts.md",
+    "audio_path": "out/2026-03-29/episode_audio.wav",
+    "video_full_path": null,
+    "note_draft_path": "out/2026-03-29/note_draft.md",
+    "eyecatch_path": null
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 42,
+        "input_tokens": 35523,
+        "output_tokens": 14979,
+        "cost_usd": 0.110418
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37168,
+        "output_tokens": 6833,
+        "cost_usd": 0.213999
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4156,
+        "cost_usd": 0.049872
+      }
+    ],
+    "total_cost_usd": 0.374289
+  }
+}

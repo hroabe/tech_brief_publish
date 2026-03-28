@@ -1,0 +1,165 @@
+{
+  "date": "2026-03-28",
+  "episode_date_local": "2026-03-28",
+  "content_snapshot_date": "2026-03-28",
+  "show_length_sec": 790,
+  "generated_at": "2026-03-27T21:52:09.553129+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-75b2acab",
+      "title": "Waymo’s skyrocketing ridership in one chart",
+      "fingerprint": "75b2acabac821084c8e58032c1e3acec",
+      "score": 75,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "TechCrunch"
+      ]
+    },
+    {
+      "item_id": "item-f42f91e9",
+      "title": "GitHub - davidmonterocrespo24/velxio: Emulate Arduino, ESP32 &amp; Raspberry Pi. in your browser. Write code, compile, and run on 19 real boards — Arduino Uno, ESP32, ESP32-C3, Raspberry Pi Pico, Raspberry Pi 3, and more. No hardware, no cloud, no limits.. Discord: https://discord.gg/rCScB9cG",
+      "fingerprint": "f42f91e9e24dbb42069cf8d9ee305ed5",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-35aeec17",
+      "title": "Memory chip giant SK hynix could help end ‘RAMmageddon’ with blockbuster US IPO",
+      "fingerprint": "35aeec173480ce54d7ee668d55defb7d",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "TechCrunch"
+      ]
+    },
+    {
+      "item_id": "item-781294cf",
+      "title": "Building FireStriker: Why I&#x27;m Making Civic Tech Free",
+      "fingerprint": "781294cf910415d301bf6b0892c041ed",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-be58438f",
+      "title": "Embracing Bayesian methods in clinical trials",
+      "fingerprint": "be58438f4b54ffdfc3399bbb23be0da1",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-3ebb169d",
+      "title": "Telnyx package compromised on PyPI",
+      "fingerprint": "3ebb169df61455a292aa8f1396294cbc",
+      "score": 28,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-8af4d77c",
+      "reason": "LINK_ONLY: Source intent uncertain: 記事は技術ガイドとして見えるが、2026年3月時点で『.claude/フォルダ』という具体的な機能が実在するかが不明確であり、Anthropic公式の発表がないため、実在する機能か仮想的な内容かの判定が困難。",
+      "title": "Anatomy of the .claude/ Folder"
+    },
+    {
+      "item_id": "item-3a4ffe6f",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Installing a Let's Encrypt TLS certificate on a Brother printer automatically with Certbot (&amp; Cloudflare)"
+    },
+    {
+      "item_id": "item-ff64b337",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Make MacOS 26 consistently bad (unironically)"
+    },
+    {
+      "item_id": "item-815cbc6f",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "ISBN Visualization"
+    },
+    {
+      "item_id": "item-1639de06",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Nashville library launches Memory Lab for digitizing home movies"
+    },
+    {
+      "item_id": "item-c6f40df8",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Meow.camera"
+    },
+    {
+      "item_id": "item-ffae8d34",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Slovenia becomes first EU state to introduce fuel rationing"
+    },
+    {
+      "item_id": "item-932c9b4d",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Sand Under a Microscope - Magnified Sand Photos"
+    },
+    {
+      "item_id": "item-64718e8d",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Japan now has a special desk for people who work at home with a pet cat[Photos]"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-28/blog.md",
+    "show_notes_path": "out/2026-03-28/show_notes.md",
+    "script_path": "out/2026-03-28/script_2hosts.md",
+    "audio_path": "out/2026-03-28/episode_audio.wav",
+    "video_full_path": null,
+    "note_draft_path": "out/2026-03-28/note_draft.md",
+    "eyecatch_path": null
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 42,
+        "input_tokens": 35936,
+        "output_tokens": 14688,
+        "cost_usd": 0.109376
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37424,
+        "output_tokens": 7154,
+        "cost_usd": 0.219582
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4243,
+        "cost_usd": 0.050916
+      }
+    ],
+    "total_cost_usd": 0.379874
+  }
+}

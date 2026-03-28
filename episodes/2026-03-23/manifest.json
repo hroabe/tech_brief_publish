@@ -1,0 +1,164 @@
+{
+  "date": "2026-03-23",
+  "episode_date_local": "2026-03-23",
+  "content_snapshot_date": "2026-03-23",
+  "show_length_sec": 845,
+  "generated_at": "2026-03-22T21:47:40.654466+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-7aceac25",
+      "title": "The gold standard of optimization: A look under the hood of RollerCoaster Tycoon",
+      "fingerprint": "7aceac2528a24117f3a1e7285b545946",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-0d878104",
+      "title": "Project NOMAD - Knowledge That Never Goes Offline",
+      "fingerprint": "0d8781047186d7f02028bbcc4769d42d",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [
+        "source_intent_promotional"
+      ],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-f31c03b4",
+      "title": "LLMs predict my coffee",
+      "fingerprint": "f31c03b470ab1a49b1e811cd36ccc30f",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-adef6f93",
+      "title": "Building an FPGA 3dfx Voodoo with Modern RTL Tools",
+      "fingerprint": "adef6f932267508a3dfcfebc0a190c61",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-0f1da52c",
+      "title": "GitHub - danveloper/flash-moe: Running a big model on a small laptop",
+      "fingerprint": "0f1da52c8c043e1c3b0fe9a5875a8691",
+      "score": 55,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-21c7b6b4",
+      "title": "MAUI Avalonia Preview 1 - Avalonia UI",
+      "fingerprint": "21c7b6b4506166acd0cb942f7c8e1483",
+      "score": 52,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-acfa4201",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Teaching Claude to QA a Mobile App"
+    },
+    {
+      "item_id": "item-62c2c366",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Windows Native App Development Is a Mess"
+    },
+    {
+      "item_id": "item-6ab00012",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Reports of code&#x27;s death are greatly exaggerated"
+    },
+    {
+      "item_id": "item-f49da894",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Five Years of Running a Systems Reading Group at Microsoft"
+    },
+    {
+      "item_id": "item-c5cf61b7",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "OpenClaw is a Security Nightmare Dressed Up as a Daydream | Composio"
+    },
+    {
+      "item_id": "item-674ae0ec",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "What Young Workers Are Doing to AI-Proof Themselves"
+    },
+    {
+      "item_id": "item-55942292",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Palantir extends reach into British state as it gets access to sensitive FCA data"
+    },
+    {
+      "item_id": "item-c1b560e0",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Manyana"
+    },
+    {
+      "item_id": "item-4950e225",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "PC Gamer Recommends RSS Readers in a 37MB Article That Just Keeps Downloading"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-23/blog.md",
+    "show_notes_path": "out/2026-03-23/show_notes.md",
+    "script_path": "out/2026-03-23/script_2hosts.md",
+    "audio_path": "out/2026-03-23/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 40,
+        "input_tokens": 35622,
+        "output_tokens": 16304,
+        "cost_usd": 0.117142
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37492,
+        "output_tokens": 7540,
+        "cost_usd": 0.225576
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 4546,
+        "cost_usd": 0.054551999999999996
+      }
+    ],
+    "total_cost_usd": 0.39727
+  }
+}

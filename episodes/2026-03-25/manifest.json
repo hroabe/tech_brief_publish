@@ -1,0 +1,169 @@
+{
+  "date": "2026-03-25",
+  "episode_date_local": "2026-03-25",
+  "content_snapshot_date": "2026-03-25",
+  "show_length_sec": 724,
+  "generated_at": "2026-03-24T21:51:54.675653+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-856fdf1d",
+      "title": "Announcing Arm AGI CPU: The silicon foundation for the agentic AI cloud era",
+      "fingerprint": "856fdf1d0e72a48eecdb5a3d589cc6cb",
+      "score": 68,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top",
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-bc0a04eb",
+      "title": "Welcome to FastMCP - FastMCP",
+      "fingerprint": "bc0a04eba6e3ee60569d30ae4d9e0065",
+      "score": 65,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [
+        "source_intent_promotional"
+      ],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-26c814c6",
+      "title": "Anthropic hands Claude Code more control, but keeps it on a leash",
+      "fingerprint": "26c814c661dd2d9f04b5e37bbabae86b",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "TechCrunch",
+        "Zenn"
+      ]
+    },
+    {
+      "item_id": "item-0b2166b4",
+      "title": "GitHub - t8/hypura: Run models too big for your Mac&#39;s memory",
+      "fingerprint": "0b2166b4d040422aefc2fd7db397cc76",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-6ab95793",
+      "title": "GitHub - ssrajadh/sentrysearch: Semantic search over videos using Gemini Embedding 2.",
+      "fingerprint": "6ab95793f53b5a243f82cce2f2069a0d",
+      "score": 45,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-51beeb01",
+      "title": "Disruption with some GitHub services",
+      "fingerprint": "51beeb01f876ce72b6adfdd4454eea3b",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-7446f9c1",
+      "reason": "LINK_ONLY: Source intent uncertain: XDA Developersは信頼できるテック媒体ですが、提供されたスニペットはナビゲーションメニューのみで記事本文がなく、タイトルの「kernel level」での書き換えという主張の真偽を検証できません。Wine 11の存在確認も2026年3月時点では困難です。",
+      "title": "Wine 11 rewrites how Linux runs Windows games at the kernel level, and the speed gains are massive"
+    },
+    {
+      "item_id": "item-30292fef",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Hypothesis, Antithesis, synthesis"
+    },
+    {
+      "item_id": "item-d97b5690",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Spotify tests new tool to stop AI slop from being attributed to real artists"
+    },
+    {
+      "item_id": "item-85f8d35f",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "[Security]: CRITICAL: Malicious litellm_init.pth in litellm 1.82.8 — credential stealer · Issue #24512 · BerriAI/litellm"
+    },
+    {
+      "item_id": "item-1ad5951a",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Introducing Apple Business — a new all-in-one platform for businesses of all sizes"
+    },
+    {
+      "item_id": "item-8ca91e32",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Is anybody else bored of talking about AI?"
+    },
+    {
+      "item_id": "item-08f7be6c",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "How the world&#x27;s first electric grid was built - Works in Progress Magazine"
+    },
+    {
+      "item_id": "item-eae28bff",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "I wanted to build vertical SaaS for pest control, so I took a technician job"
+    },
+    {
+      "item_id": "item-8cbe6fda",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Email.md"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-25/blog.md",
+    "show_notes_path": "out/2026-03-25/show_notes.md",
+    "script_path": "out/2026-03-25/script_2hosts.md",
+    "audio_path": "out/2026-03-25/episode_audio.wav",
+    "video_full_path": null,
+    "note_draft_path": "out/2026-03-25/note_draft.md",
+    "eyecatch_path": null
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 42,
+        "input_tokens": 34927,
+        "output_tokens": 14344,
+        "cost_usd": 0.106647
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37542,
+        "output_tokens": 6512,
+        "cost_usd": 0.210306
+      }
+    ],
+    "tts": null,
+    "openai_tts_details": [
+      {
+        "model": "gpt-4o-mini-tts",
+        "chars": 3983,
+        "cost_usd": 0.047796000000000005
+      }
+    ],
+    "total_cost_usd": 0.364749
+  }
+}

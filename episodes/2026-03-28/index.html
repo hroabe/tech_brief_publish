@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tech News Radio - 2026-03-28</title>
+<style>:root {
+  --bg: #121212;
+  --surface: #1E1E1E;
+  --surface-strong: #252525;
+  --border: rgba(255, 255, 255, 0.05);
+  --text: #E0E0E0;
+  --text-muted: #A0A0A0;
+  --accent: #00D8FF;
+  --accent-light: #6C8AFF;
+  --accent-soft: rgba(0, 216, 255, 0.1);
+  --success: #10b981;
+  --warning: #f59e0b;
+  --strong: #fff;
+  --border-radius: 12px;
+}
+[data-theme="light"] {
+  --bg: #f5f5f5;
+  --surface: #ffffff;
+  --surface-strong: #f0f0f0;
+  --border: rgba(0, 0, 0, 0.08);
+  --text: #1a1a1a;
+  --text-muted: #666666;
+  --accent: #0099b3;
+  --accent-light: #5060c0;
+  --accent-soft: rgba(0, 153, 179, 0.08);
+  --success: #059669;
+  --warning: #d97706;
+  --strong: #000;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background 0.3s, color 0.3s;
+}
+a { color: var(--accent-light); text-decoration: none; }
+a:hover { text-decoration: underline; }
+button, input, textarea, select { font: inherit; }
+.container { max-width: 800px; margin: 0 auto; padding: 40px 20px 80px; }
+
+/* Header */
+header {
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+  margin-bottom: 0;
+}
+header .container { padding: 24px 20px; }
+header h1 { font-size: 1.5rem; font-weight: 700; }
+header h1 a { color: var(--strong); }
+header h1 a:hover { text-decoration: none; }
+header p { color: var(--text-muted); font-size: 0.95rem; margin-top: 0.25rem; }
+.header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-links {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  transition: color 0.2s ease;
+}
+.nav-links a:hover { color: var(--strong); text-decoration: none; }
+.theme-toggle {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.35rem 0.6rem;
+  line-height: 1;
+  transition: background 0.3s, border-color 0.3s;
+}
+.theme-toggle:hover { border-color: var(--accent); }
+
+/* Section titles */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--strong);
+  letter-spacing: 0.05em;
+}
+.section-subtitle {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin: 40px 0 20px;
+  color: var(--strong);
+}
+.section-desc {
+  color: var(--text-muted);
+  margin-bottom: 32px;
+  font-size: 0.95rem;
+}
+
+/* Grid layout */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.col-half { width: calc(50% - 12px); }
+.col-full { width: 100%; }
+
+/* Cards */
+.card {
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6);
+  border-color: rgba(0, 216, 255, 0.3);
+}
+[data-theme="light"] .card:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 153, 179, 0.3);
+}
+.card h2 {
+  font-size: 1.25rem;
+  color: var(--strong);
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card ul { list-style: none; padding-left: 0; margin: 0; }
+.card li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+.card li:last-child { margin-bottom: 0; }
+.list-check li::before { content: '\2713'; position: absolute; left: 0; color: var(--accent); font-weight: bold; font-size: 1.1em; }
+.list-arrow li::before { content: '\2794'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.9em; top: 0.1em; }
+.list-dot li::before { content: '\25A0'; position: absolute; left: 0; color: var(--text-muted); font-size: 0.6em; top: 0.5em; }
+
+/* Hero card */
+.hero-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 16px;
+}
+.hero-title {
+  font-size: 1.5rem;
+  color: var(--strong);
+  margin-top: 0;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+.hero-description {
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+.hero-description:last-of-type { margin-bottom: 24px; }
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.hero-pill {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(0, 216, 255, 0.3);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+[data-theme="light"] .hero-pill {
+  border-color: rgba(0, 153, 179, 0.3);
+}
+
+/* RSS link */
+.rss-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--surface);
+  color: var(--text);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-bottom: 16px;
+}
+.rss-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--accent-soft);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+/* Episode list & cards */
+.episodes-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.episode-card {
+  display: block;
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.episode-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 216, 255, 0.3);
+  text-decoration: none;
+}
+[data-theme="light"] .episode-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 153, 179, 0.3);
+}
+.episode-card:hover .episode-title {
+  color: var(--accent);
+}
+.episode-date {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+.episode-title {
+  font-size: 1.15rem;
+  color: var(--accent-light);
+  margin: 0 0 12px 0;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+.episode-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Content card (markdown pages) */
+.content-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 24px;
+}
+.content-card h1 { font-size: 1.8rem; font-weight: bold; color: var(--strong); margin-bottom: 8px; letter-spacing: 0.05em; }
+.content-card h2 { font-size: 1.25rem; color: var(--strong); margin-top: 28px; margin-bottom: 16px; }
+.content-card h3 { font-size: 1.05rem; color: var(--accent-light); margin-top: 20px; margin-bottom: 8px; }
+.content-card p { margin-bottom: 12px; color: var(--text); }
+.content-card ul, .content-card ol { margin-left: 1.5rem; margin-bottom: 12px; }
+.content-card li { margin-bottom: 6px; }
+
+/* Notice card */
+.notice-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 28px;
+  margin-bottom: 24px;
+  margin-top: 32px;
+}
+.notice-card h2 {
+  font-size: 1.25rem;
+  color: var(--accent-light);
+  margin-top: 0;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(108, 138, 255, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.notice-card h3 {
+  font-size: 1rem;
+  color: var(--accent-light);
+  margin-bottom: 12px;
+}
+.notice-card ul { list-style: none; padding-left: 0; margin: 0; }
+.notice-card li {
+  position: relative;
+  padding-left: 1.8em;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+.notice-card li::before {
+  content: '\25A0';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+  font-size: 0.6em;
+  top: 0.5em;
+}
+.notice-card li:last-child { margin-bottom: 0; }
+
+/* Pagination */
+.page-heading {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: var(--strong);
+}
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin: 24px 0;
+}
+.pagination a,
+.pagination span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.4rem;
+  padding: 0.55rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 0.88rem;
+}
+.pagination a:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+}
+.pagination .current {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.pagination .summary {
+  min-width: auto;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+}
+
+/* Episode page */
+.episode-page .cover {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  display: block;
+}
+.episode-page audio {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+.episode-page .content {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+.episode-page .content h1 { font-size: 1.4rem; margin-bottom: 1rem; border-bottom: 1px solid var(--border); padding-bottom: 0.75rem; color: var(--strong); }
+.episode-page .content h2 { font-size: 1.2rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--accent-light); }
+.episode-page .content h3 { font-size: 1.05rem; margin-top: 1.25rem; margin-bottom: 0.5rem; }
+.episode-page .content p { margin-bottom: 0.75rem; }
+.episode-page .content ul, .episode-page .content ol { margin-left: 1.5rem; margin-bottom: 0.75rem; }
+.episode-page .content li { margin-bottom: 0.3rem; }
+.episode-page .content strong { color: var(--strong); }
+.episode-page .content em { color: var(--text-muted); }
+.episode-page .content hr { border: none; border-top: 1px solid var(--border); margin: 1.5rem 0; }
+.episode-page .content a { word-break: break-all; }
+
+/* Tabs */
+.tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 0;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  transition: color 0.2s ease;
+  position: relative;
+}
+.tab-btn:hover { color: var(--strong); }
+.tab-btn.active { color: var(--accent); }
+.tab-btn.active::after {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Disclosure list */
+.disclosure-list {
+  list-style: none;
+  margin-left: 0;
+}
+.disclosure-list li {
+  position: relative;
+  padding-left: 1rem;
+}
+.disclosure-list li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--accent-light);
+}
+
+/* Buttons */
+.button-link,
+.consent-action {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.button-link:hover,
+.consent-action:hover {
+  border-color: var(--accent);
+}
+.button-link.primary,
+.consent-action.primary {
+  background: var(--accent-light);
+  border-color: var(--accent-light);
+  color: #fff;
+}
+.button-link.primary:hover,
+.consent-action.primary:hover {
+  opacity: 0.85;
+}
+
+/* Contact form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form-grid {
+  display: flex;
+  gap: 20px;
+}
+.form-grid > div { flex: 1; }
+.contact-form label {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--bg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--strong);
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+[data-theme="light"] .contact-form input,
+[data-theme="light"] .contact-form textarea,
+[data-theme="light"] .contact-form select {
+  border-color: var(--border);
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px rgba(0, 216, 255, 0.2);
+}
+.contact-form textarea {
+  min-height: 180px;
+  resize: vertical;
+}
+.checkbox-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.checkbox-row input { width: auto; }
+.contact-form button {
+  background: var(--accent-light);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  padding: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  width: 100%;
+}
+.contact-form button:hover { opacity: 0.85; }
+.contact-form button:active { transform: scale(0.98); }
+.fine-print {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+/* Footer */
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+.footer-links a,
+.footer-links button {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.footer-links button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.5rem 0 2rem;
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+footer .container { padding: 0 20px; }
+
+/* Consent banner */
+.consent-banner {
+  position: fixed;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 1000;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem 1rem 0.9rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--border-radius);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+}
+.consent-banner[hidden] { display: none; }
+.consent-banner h3 {
+  font-size: 1rem;
+  margin-bottom: 0.45rem;
+}
+.consent-banner p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+}
+.consent-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Feedback Form */
+.feedback-section {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--card-bg, var(--surface));
+}
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.feedback-form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 0.25rem;
+}
+.star-rating input { display: none; }
+.star-rating label {
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: var(--text-muted);
+}
+.star-rating label::before { content: "★"; }
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #f5a623;
+}
+.feedback-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--text);
+}
+.feedback-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: inherit;
+  resize: vertical;
+}
+.feedback-form button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+}
+.feedback-form button:hover {
+  opacity: 0.9;
+}
+
+/* SNS Share Buttons */
+.share-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  font-weight: 600;
+}
+.share-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+.share-x { color: var(--accent); }
+.share-x:hover { background: var(--accent-soft); }
+.share-fb { color: #1877f2; }
+.share-fb:hover { background: rgba(24, 119, 242, 0.1); border-color: #1877f2; }
+
+/* Responsive */
+@media (max-width: 650px) {
+  .col-half { width: 100%; }
+  .form-grid { flex-direction: column; }
+}
+@media (max-width: 600px) {
+  .container { padding: 20px 16px 60px; }
+  header .container { padding: 16px; }
+  .hero-card,
+  .content-card,
+  .notice-card,
+  .card { padding: 20px; }
+  .episode-page .content { padding: 1.25rem; }
+  .header-row { align-items: flex-start; }
+  .consent-banner { left: 0.75rem; right: 0.75rem; }
+}
+</style>
+<script>
+(function(){
+  var t = localStorage.getItem('theme');
+  if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+})();
+function toggleTheme(){
+  var el = document.documentElement;
+  if (el.getAttribute('data-theme') === 'light') {
+    el.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    el.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  }
+  updateIcon();
+}
+function updateIcon(){
+  var btn = document.getElementById('theme-btn');
+  if (!btn) return;
+  btn.textContent = document.documentElement.getAttribute('data-theme') === 'light' ? '\u263E' : '\u2600';
+}
+document.addEventListener('DOMContentLoaded', updateIcon);
+</script>
+
+<script>
+const PLAUSIBLE_DOMAIN = "";
+const PLAUSIBLE_SCRIPT_SRC = "https://plausible.io/js/script.js";
+const ANALYTICS_CONSENT_KEY = 'site.analyticsConsent';
+
+function loadPlausible() {
+  if (!PLAUSIBLE_DOMAIN) return;
+  if (document.querySelector('script[data-plausible-loader="true"]')) return;
+  var script = document.createElement('script');
+  script.defer = true;
+  script.src = PLAUSIBLE_SCRIPT_SRC;
+  script.setAttribute('data-domain', PLAUSIBLE_DOMAIN);
+  script.setAttribute('data-plausible-loader', 'true');
+  document.head.appendChild(script);
+}
+
+function hideConsentBanner() {
+  var banner = document.getElementById('consent-banner');
+  if (banner) banner.hidden = true;
+}
+
+function showConsentBanner() {
+  var banner = document.getElementById('consent-banner');
+  if (banner) banner.hidden = false;
+}
+
+function updateConsentUi() {
+  if (!PLAUSIBLE_DOMAIN) {
+    hideConsentBanner();
+    return;
+  }
+  var consent = localStorage.getItem(ANALYTICS_CONSENT_KEY);
+  if (consent === 'accepted') {
+    loadPlausible();
+    hideConsentBanner();
+  } else if (consent === 'rejected') {
+    hideConsentBanner();
+  } else {
+    showConsentBanner();
+  }
+}
+
+function acceptAnalyticsConsent() {
+  localStorage.setItem(ANALYTICS_CONSENT_KEY, 'accepted');
+  updateConsentUi();
+}
+
+function rejectAnalyticsConsent() {
+  localStorage.setItem(ANALYTICS_CONSENT_KEY, 'rejected');
+  updateConsentUi();
+}
+
+function openCookieSettings() {
+  if (!PLAUSIBLE_DOMAIN) return;
+  showConsentBanner();
+}
+
+document.addEventListener('DOMContentLoaded', updateConsentUi);
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3.3.1/dist/purify.min.js" integrity="sha384-80VlBZnyAwkkqtSfg5NhPyZff6nU4K/qniLBL8Jnm4KDv6jZhLiYtJbhglg/i9ww" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@17.0.3/lib/marked.umd.js" integrity="sha384-cYPlWZ3J0Pi4sIKo/Yy2hbXAfqi7S7h4/5xARy+4Aa2brtE1tM7Old55+Y6NkFBW" crossorigin="anonymous"></script>
+<meta property="og:title" content="Tech News Radio — Waymo’s skyrocketing ridership in one chart / GitHub - davidmonterocrespo24/velxio: Emulate Arduino, ESP32 &amp;amp; Raspberry Pi. in your browser. Write code, compile, and run on 19 real boards — Arduino Uno, ESP32, ESP32-C3, Raspberry Pi Pico, Raspberry Pi 3, and more. No hardware, no cloud, no limits.. Discord: https://discord.gg/rCScB9cG / Memory chip giant SK hynix could help end ‘RAMmageddon’ with blockbuster US IPO">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-28/eyecatch.png">
+<meta property="og:url" content="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-28/">
+<meta property="og:description" content="2026-03-28 配信 — 最新テックニュースを、音声と記事でまとめて配信する日本語メディアです。">
+<meta property="og:site_name" content="Tech News Radio">
+<link rel="canonical" href="https://hroabe.github.io/tech_brief_publish/episodes/2026-03-28/">
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Tech News Radio — Waymo’s skyrocketing ridership in one chart / GitHub - davidmonterocrespo24/velxio: Emulate Arduino, ESP32 &amp; Raspberry Pi. in your browser. Write code, compile, and run on 19 real boards — Arduino Uno, ESP32, ESP32-C3, Raspberry Pi Pico, Raspberry Pi 3, and more. No hardware, no cloud, no limits.. Discord: https://discord.gg/rCScB9cG / Memory chip giant SK hynix could help end ‘RAMmageddon’ with blockbuster US IPO",
+    "datePublished": "2026-03-28",
+    "image": "https://hroabe.github.io/tech_brief_publish/episodes/2026-03-28/eyecatch.png",
+    "author": {
+      "@type": "Organization",
+      "name": "Tech News Radio"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastEpisode",
+    "name": "Tech News Radio — Waymo’s skyrocketing ridership in one chart / GitHub - davidmonterocrespo24/velxio: Emulate Arduino, ESP32 &amp; Raspberry Pi. in your browser. Write code, compile, and run on 19 real boards — Arduino Uno, ESP32, ESP32-C3, Raspberry Pi Pico, Raspberry Pi 3, and more. No hardware, no cloud, no limits.. Discord: https://discord.gg/rCScB9cG / Memory chip giant SK hynix could help end ‘RAMmageddon’ with blockbuster US IPO",
+    "datePublished": "2026-03-28",
+    "url": "https://hroabe.github.io/tech_brief_publish/episodes/2026-03-28/",
+    "duration": "PT13M10S",
+    "associatedMedia": {
+      "@type": "MediaObject",
+      "contentUrl": "https://hroabe.github.io/tech_brief_publish/episodes/2026-03-28/episode_audio.mp3"
+    }
+  }
+]
+</script>
+
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="header-row">
+      <div>
+        <h1><a href="../../index.html">Tech News Radio</a></h1>
+        <p>毎朝、ビジネスパーソンや開発者向けの最新のテックニュースをまとめてお届けします。</p>
+      </div>
+      <button id="theme-btn" class="theme-toggle" onclick="toggleTheme()" title="表示テーマ切り替え"></button>
+    </div>
+    <nav class="nav-links">
+      <a href="../../index.html">Episodes</a>
+      <a href="../../about.html">About</a>
+      <a href="../../contact.html">Contact</a>
+      <a href="../../podcast_feed.xml">RSS Feed</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container episode-page">
+  <img class="cover" src="eyecatch.png" alt="Cover Art">
+  <audio controls preload="metadata"><source src="episode_audio.mp3" type="audio/mpeg"></audio>
+
+  <section id="episode-notice" class="notice-card"></section>
+
+  <div class="tabs">
+    <button class="tab-btn active" onclick="switchTab('blog')">Blog</button>
+    <button class="tab-btn" onclick="switchTab('notes')">Show Notes</button>
+  </div>
+
+  <div id="tab-blog" class="content tab-content active"></div>
+  <div id="tab-notes" class="content tab-content"></div>
+
+  
+<div class="share-buttons">
+  <a href="https://twitter.com/intent/tweet?text=Tech%20News%20Radio%20-%202026-03-28%20%23%E3%83%86%E3%83%83%E3%82%AF%E3%83%8B%E3%83%A5%E3%83%BC%E3%82%B9%20%23TechNewsRadio&url=https%3A//hroabe.github.io/tech_brief_publish/episodes/2026-03-28/index.html"
+     target="_blank" rel="noopener" class="share-btn share-x">Xでシェア</a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//hroabe.github.io/tech_brief_publish/episodes/2026-03-28/index.html"
+     target="_blank" rel="noopener" class="share-btn share-fb">Facebookでシェア</a>
+</div>
+
+  
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-links">
+      <a href="../../about.html">About</a>
+      <a href="../../policy.html">ポリシー</a>
+      <a href="../../privacy.html">プライバシーポリシー</a>
+      <a href="../../contact.html">お問い合わせ</a>
+      <button type="button" onclick="openCookieSettings()">Cookie設定</button>
+    </div>
+    <p>本サイトのテキストと音声にはAI生成コンテンツを含みます。最終確認は各話の出典リンクから原文をご確認ください。</p>
+    <p>&copy; 2026 Studio Machikita</p>
+  </div>
+</footer>
+
+
+<script>
+(function() {
+  const markdownContent = `### このエピソードについて
+
+- 本ページは公開情報をもとにした要約を含みます。
+- テキストと音声にはAI生成を含み、正確性や最新性は保証しません。
+- 紹介している記事やサービス名等の権利は各権利者に帰属します。
+- 内容に問題がある場合は [お問い合わせページ](../../contact.html) からご連絡ください。`;
+  const renderMode = "default";
+  function renderMarkdown(md) {
+    if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+      marked.setOptions({ breaks: true });
+      return DOMPurify.sanitize(marked.parse(md));
+    }
+    var el = document.createElement('pre');
+    el.style.whiteSpace = 'pre-wrap';
+    el.textContent = md;
+    return el.outerHTML;
+  }
+  const target = document.getElementById('episode-notice');
+  target.innerHTML = renderMarkdown(markdownContent);
+  if (renderMode === 'hero-pills') {
+    var heading = target.querySelector('h2');
+    if (heading) {
+      var h1 = document.createElement('h1');
+      h1.className = 'hero-title';
+      h1.innerHTML = heading.innerHTML;
+      heading.replaceWith(h1);
+    }
+    target.querySelectorAll('p').forEach(function(p) {
+      p.classList.add('hero-description');
+    });
+    var list = target.querySelector('ul');
+    if (list) {
+      var pillWrap = document.createElement('div');
+      pillWrap.className = 'hero-meta';
+      Array.from(list.querySelectorAll('li')).forEach(function(item) {
+        var pill = document.createElement('span');
+        pill.className = 'hero-pill';
+        pill.textContent = item.textContent.trim();
+        pillWrap.appendChild(pill);
+      });
+      list.replaceWith(pillWrap);
+    }
+  }
+})();
+</script>
+
+<script>
+const blogMd = `<!--
+---
+title: "Tech News Radio — 2026-03-28"
+subtitle: "ウェイモの急増する乗客数をグラフ1枚で示す / ブラウザでArduino、ESP32、Raspberry Piをエミュレート。コードを書いてコンパイルし、..."
+date: "2026-03-28"
+vol: 21
+topics:
+  - AI
+  - Robotics
+  - Business
+  - OSS
+  - Hardware
+author: "Hiroki Abe"
+---
+-->
+# 🎧 Tech News Radio — 2026-03-28
+
+*📖 約12分で読めます ｜ 🏷️ AI, Robotics, Business, OSS, Hardware*
+
+---
+
+## 📌 今日のハイライト
+- 🤖 **ウェイモの急増する乗客数をグラフ1枚で示す** — Waymoのロボタクシー利用者数が2年未満で10倍に急増
+- 🔧 **メモリチップ大手SKハイニックス、米国での大型IPOで「RAMゲドン」終息に貢献か** — SK hynixの米国上場でメモリ不足解消へ
+- 🔒 **TelnyxパッケージがPyPIで侵害される** — PyPI上のTelnyxパッケージが侵害される
+- 🔬 **ベイズ統計手法を臨床試験に取り入れる** — 臨床試験へのベイズ統計手法の導入が注目される
+- 📦 **ブラウザでArduino、ESP32、Raspberry Piをエミュレート。コードを書いてコンパイルし、19種類の実ボード（Arduino Uno、ESP32、ESP32-C3、Raspberry Pi Pico、Raspberry Pi 3など）で実行可能。ハードウェア不要、クラウド不要、制限なし。** — ブラウザ上で19種のマイコンボードをエミュレート
+- 🚀 **FireStrikerの構築：なぜ私は市民テクノロジーを無料で提供するのか** — 市民活動支援ツールFireStrikerを無償公開する理由
+
+---
+
+## 🤖 ウェイモの急増する乗客数をグラフ1枚で示す
+\`AI\` \`Robotics\` \`Business\`
+
+<details>
+<summary>📄 原題: Waymo’s skyrocketing ridership in one chart</summary>
+</details>
+
+> **一言で**: Waymoのロボタクシー利用者数が2年未満で10倍に急増
+
+- 要点1: Waymoの週間有料乗車回数が2年足らずで約10倍に拡大
+- 要点2: グラフ1枚でその急成長ぶりが一目でわかる内容
+- 要点3: 自動運転タクシーが実用サービスとして普及フェーズに入った可能性
+
+💡 **なぜ重要か**
+Waymoは米Googleの親会社Alphabetが擁する自動運転部門です。長年にわたる開発と限定的な試験運用を経て、サンフランシスコやフェニックスなどの都市で有料サービスを展開しています。今回の急成長は、自動運転技術が「実験段階」から「日常の移動手段」へと移行しつつあることを示す重要な指標と見られています。 ロボタクシー市場の本格的な立ち上がりは、配車サービス業界だけでなく、地図・センサー・エッジコンピューティングなど関連技術全体に波及します。ソフトウェア企業にとっては自動運転向けのインフラやデータ基盤の需要が高まる可能性があり、モビリティ×AIの領域で新たなビジネス機会が生まれそうです。
+
+🎯 **今日のアクション**
+自動運転や移動サービス領域に関わるエンジニアやプロダクトリーダーは、Waymoの成長曲線を参考に市場参入のタイミングを再評価すべきです。特に車両制御・地図データ・乗客体験のUX設計など、隣接領域でのスキル習得や事業検討を早めに進めることが有効です。
+
+🔗 [原文を読む](https://techcrunch.com/2026/03/27/waymo-skyrocketing-ridership-in-one-chart/)
+
+---
+
+## 🔧 メモリチップ大手SKハイニックス、米国での大型IPOで「RAMゲドン」終息に貢献か
+\`Hardware\` \`Business\` \`AI\`
+
+<details>
+<summary>📄 原題: Memory chip giant SK hynix could help end ‘RAMmageddon’ with blockbuster US IPO</summary>
+</details>
+
+> **一言で**: SK hynixの米国上場でメモリ不足解消へ
+
+- 要点1: SK hynixが米国でIPOを検討、調達額は1兆〜1.4兆円規模と見られる
+- 要点2: 調達資金は生産能力の拡大に充てる方針
+- 要点3: 「RAMmageddon」と呼ばれるメモリ不足の緩和につながる可能性がある
+- 要点4: 他のメモリメーカーの上場を促す呼び水になるとも見られている
+
+💡 **なぜ重要か**
+AI向けサーバーやデータセンターの急拡大により、メモリチップの需要が供給を大幅に上回っています。この状況は「RAMmageddon」と呼ばれ、業界全体の課題になっています。SK hynixはSamsung、Micronと並ぶ世界最大級のメモリメーカーであり、その米国上場は資金調達だけでなく、市場への強いシグナルとなります。 大規模な設備投資が実現すれば、メモリ価格の高騰が落ち着き、AIインフラの整備コストが下がる可能性があります。また、他の半導体メーカーが米国市場での資金調達を検討するきっかけにもなりそうです。長期的には、供給安定がAI開発の加速を後押しする構図が生まれるでしょう。
+
+🎯 **今日のアクション**
+メモリ調達コストの動向を注視し、インフラ投資計画の見直しタイミングを検討しておくと良いでしょう。特にAI基盤を構築中のチームは、メモリ価格の変化が予算に与える影響をシミュレーションしておくことをお勧めします。
+
+🔗 [原文を読む](https://techcrunch.com/2026/03/27/memory-chip-giant-sk-hynix-could-help-end-rammageddon-with-blockbuster-us-ipo/)
+
+---
+
+## 🔒 TelnyxパッケージがPyPIで侵害される
+\`Security\` \`OSS\` \`DevOps\`
+
+> ⚠️ **注意**: この記事は情報源が限られているため、内容の正確性を保証できません。必要に応じて一次情報もご確認ください。
+
+<details>
+<summary>📄 原題: Telnyx package compromised on PyPI</summary>
+</details>
+
+> **一言で**: PyPI上のTelnyxパッケージが侵害される
+
+- 要点1: PyPI（Pythonの公式パッケージ配布サービス）上のTelnyxパッケージが不正に改ざんされた
+- 要点2: サプライチェーン攻撃の一種で、利用者が気づかずに悪意あるコードを取り込む恐れがある
+- 要点3: 詳細な被害範囲や攻撃手法は現時点では不明
+
+💡 **なぜ重要か**
+PyPIはPythonエコシステムの中核であり、世界中の開発者が日常的に利用しています。公開パッケージへの不正侵入は、ダウンストリームの多数のプロジェクトに影響を与えるため、ソフトウェアサプライチェーン攻撃として特に危険視されています。近年、npmやPyPIを標的にした同種の攻撃が増加傾向にあります。 オープンソースのパッケージ管理基盤への信頼が揺らぐ可能性があります。企業や開発チームは依存パッケージの検証コストを高める必要に迫られ、セキュリティ審査の強化が業界全体の標準になっていくと見られます。
+
+🎯 **今日のアクション**
+Telnyxパッケージを利用しているプロジェクトは即座にバージョンを確認し、不審なコードが含まれていないか検証してください。依存関係のハッシュ検証やプライベートミラーの活用も有効な対策です。
+
+🔗 [原文を読む](https://telnyx.com/resources/telnyx-python-sdk-supply-chain-security-notice-march-2026)
+
+---
+
+## 🔬 ベイズ統計手法を臨床試験に取り入れる
+\`Science\` \`Data\` \`AI\`
+
+> ⚠️ **注意**: この記事は情報源が限られているため、内容の正確性を保証できません。必要に応じて一次情報もご確認ください。
+
+<details>
+<summary>📄 原題: Embracing Bayesian methods in clinical trials</summary>
+</details>
+
+> **一言で**: 臨床試験へのベイズ統計手法の導入が注目される
+
+- 要点1: 臨床試験でベイズ統計（事前知識を確率に組み込む手法）の活用が広がりつつある
+- 要点2: 従来の頻度論的手法に代わる選択肢として再評価されている
+- 要点3: 試験設計の柔軟性向上や意思決定の効率化が期待される
+
+💡 **なぜ重要か**
+臨床試験は新薬や治療法の承認に直結する重要なプロセスです。従来の統計手法では試験規模が大きくなりがちで、時間とコストがかかります。ベイズ統計は過去のデータや専門知識を事前分布として取り込めるため、より少ないサンプルで意思決定できる可能性があります。規制当局もベイズ的アプローチへの関心を高めており、医療統計の分野で注目が集まっています。 ベイズ手法が臨床試験の標準に近づけば、新薬開発のスピードが上がり、医療業界全体のコスト削減につながる可能性があります。また、AIや機械学習との親和性が高いベイズ統計の普及は、医療データ解析の高度化も後押しするでしょう。
+
+🎯 **今日のアクション**
+医療・ヘルスケア領域に関わるエンジニアやデータサイエンティストは、ベイズ統計の基礎を学んでおくと良いでしょう。PythonのPyMCやStanといったツールで実装を試してみることをおすすめします。
+
+🔗 [原文を読む](https://jamanetwork.com/journals/jama/fullarticle/2847011)
+
+---
+
+## 📦 ブラウザでArduino、ESP32、Raspberry Piをエミュレート。コードを書いてコンパイルし、19種類の実ボード（Arduino Uno、ESP32、ESP32-C3、Raspberry Pi Pico、Raspberry Pi 3など）で実行可能。ハードウェア不要、クラウド不要、制限なし。
+\`OSS\` \`Hardware\` \`Web\`
+
+<details>
+<summary>📄 原題: GitHub - davidmonterocrespo24/velxio: Emulate Arduino, ESP32 &amp;amp; Raspberry Pi. in your browser. Write code, compile, and run on 19 real boards — Arduino Uno, ESP32, ESP32-C3, Raspberry Pi Pico, Raspberry Pi 3, and more. No hardware, no cloud, no limits.. Discord: https://discord.gg/rCScB9cG</summary>
+</details>
+
+> **一言で**: ブラウザ上で19種のマイコンボードをエミュレート
+
+- Arduino Uno、ESP32、Raspberry Pi 3など19種のボードをブラウザで動作可能
+- コードの記述・コンパイル・実行がすべてブラウザ内で完結
+- 実機不要・クラウド不要で手軽にマイコン開発を体験できる
+- OSSとしてGitHubで公開、Discordコミュニティも運営中
+
+💡 **なぜ重要か**
+マイコン（小型制御用コンピュータ）の学習や開発には実機購入が必要でした。Velxioはその障壁を取り除き、ブラウザだけで本格的な組み込み開発を体験できる環境を提供します。教育現場や入門者にとって特に意義が大きいツールです。 実機なしでArduinoやESP32の開発を学べる環境が整うことで、組み込みエンジニアの裾野が広がります。教育コストの低下や、プロトタイプ検証の効率化にも貢献する可能性があります。
+
+🎯 **今日のアクション**
+組み込み開発の入門教材や社内勉強会のツールとして試してみる価値があります。GitHubでソースを確認し、対応ボードや精度を実際に検証してみましょう。
+
+🔗 [原文を読む](https://github.com/davidmonterocrespo24/velxio)
+
+---
+
+## 🚀 FireStrikerの構築：なぜ私は市民テクノロジーを無料で提供するのか
+\`Startup\` \`OSS\` \`Web\`
+
+<details>
+<summary>📄 原題: Building FireStriker: Why I&amp;#x27;m Making Civic Tech Free</summary>
+</details>
+
+> **一言で**: 市民活動支援ツールFireStrikerを無償公開する理由
+
+- 開発者の妻が市民活動に積極的に参加しており、その経験がツール開発の動機になっている
+- FireStrikerは市民参加（シビックテック）を支援するソフトウェアで、無償提供を選択
+- エンジニアとして「社会に役立つものを作る」という姿勢を公開形式で発信
+
+💡 **なぜ重要か**
+シビックテック（市民活動を支援する技術）は、選挙ボランティアや地域組織活動など草の根の民主主義を支える分野です。しかし商業化が難しく、持続可能なツールが少ないのが現状です。開発者自身の身近な体験から生まれたプロダクトが、無償公開という形で社会還元を目指している点が注目されます。 エンジニアが自らの技術を社会課題に向ける「ビルド・イン・パブリック」の動きは、OSS文化と市民活動の交差点として広がりつつあります。商業製品に頼らない市民向けツールの充実は、民主的プロセスへのアクセス格差を縮める可能性があります。
+
+🎯 **今日のアクション**
+自分のスキルで解決できる身近な社会課題を探し、小さくても公開できるツールを作ることを検討してみてください。無償公開の判断基準や持続可能性の設計も、事前に考えておくと良いでしょう。
+
+🔗 [原文を読む](https://firestriker.org/blog/building-firestriker-why-im-making-civic-tech-free)
+
+---
+
+## 📝 まとめ
+
+# テックニュース横断考察
+
+これら3つのニュースから見えるのは、テクノロジー産業における急速な成長と、それに伴う構造的な課題への対応という共通テーマです。ウェイモのロボタクシー利用者数の急増とSK hynixのIPOは、いずれも需要の爆発的な増加に供給側がどう対応するかという問題を示唆しており、特にAI時代における計算能力やインフラの不足が業界全体の制約要因になりつつあることを浮き彫りにしています。一方、Telnyxパッケージの侵害事件は、こうした急成長の過程で、セキュリティやサプライチェーンの脆弱性が顕在化していることを警告しており、革新の加速と信頼性確保のバランスが今後のテック業界の重要な課題となることを示唆しています。
+
+---
+
+## 🎯 今日の実務アクション 3 選
+
+1. **ウェイモの急増する乗客数をグラフ1枚で示す**: 自動運転や移動サービス領域に関わるエンジニアやプロダクトリーダーは、Waymoの成長曲線を参考に市場参入のタイミングを再評価すべきです。特に車両制御・地図データ・乗客体験のUX設計など、隣接領域でのスキル習得や事業検討を早めに進めることが有効です。
+2. **メモリチップ大手SKハイニックス、米国での大型IPOで「RAMゲドン」終息に貢献か**: メモリ調達コストの動向を注視し、インフラ投資計画の見直しタイミングを検討しておくと良いでしょう。特にAI基盤を構築中のチームは、メモリ価格の変化が予算に与える影響をシミュレーションしておくことをお勧めします。
+3. **TelnyxパッケージがPyPIで侵害される**: Telnyxパッケージを利用しているプロジェクトは即座にバージョンを確認し、不審なコードが含まれていないか検証してください。依存関係のハッシュ検証やプライベートミラーの活用も有効な対策です。
+
+---
+
+## 🔗 出典一覧
+- [ウェイモの急増する乗客数をグラフ1枚で示す](https://techcrunch.com/2026/03/27/waymo-skyrocketing-ridership-in-one-chart/)
+- [ブラウザでArduino、ESP32、Raspberry Piをエミュレート。コードを書いてコンパイルし、19種類の実ボード（Arduino Uno、ESP32、ESP32-C3、Raspberry Pi Pico、Raspberry Pi 3など）で実行可能。ハードウェア不要、クラウド不要、制限なし。](https://github.com/davidmonterocrespo24/velxio)
+- [メモリチップ大手SKハイニックス、米国での大型IPOで「RAMゲドン」終息に貢献か](https://techcrunch.com/2026/03/27/memory-chip-giant-sk-hynix-could-help-end-rammageddon-with-blockbuster-us-ipo/)
+- [FireStrikerの構築：なぜ私は市民テクノロジーを無料で提供するのか](https://firestriker.org/blog/building-firestriker-why-im-making-civic-tech-free)
+- [ベイズ統計手法を臨床試験に取り入れる](https://jamanetwork.com/journals/jama/fullarticle/2847011)
+- [TelnyxパッケージがPyPIで侵害される](https://telnyx.com/resources/telnyx-python-sdk-supply-chain-security-notice-march-2026)`;
+const notesMd = `# Tech News Radio Show Notes - #021 (2026-03-28)
+
+## エピソード情報
+- **エピソード**: #021
+- **日付**: 2026-03-28
+- **尺**: 約 13 分
+
+## 免責事項
+当番組の内容は各情報源の要約です。正確な情報は必ず下記の原文リンクよりご確認ください。誤りがある場合はお知らせください。
+
+## 出典リンク一覧
+### 本日のトップニュース
+- [Waymo’s skyrocketing ridership in one chart](https://techcrunch.com/2026/03/27/waymo-skyrocketing-ridership-in-one-chart/)
+- [Memory chip giant SK hynix could help end ‘RAMmageddon’ with blockbuster US IPO](https://techcrunch.com/2026/03/27/memory-chip-giant-sk-hynix-could-help-end-rammageddon-with-blockbuster-us-ipo/)
+- [Telnyx package compromised on PyPI](https://telnyx.com/resources/telnyx-python-sdk-supply-chain-security-notice-march-2026)
+
+### 注目の深掘り
+- [Embracing Bayesian methods in clinical trials](https://jamanetwork.com/journals/jama/fullarticle/2847011)
+
+### 小ネタ・その他
+- [GitHub - davidmonterocrespo24/velxio: Emulate Arduino, ESP32 &amp; Raspberry Pi. in your browser. Write code, compile, and run on 19 real boards — Arduino Uno, ESP32, ESP32-C3, Raspberry Pi Pico, Raspberry Pi 3, and more. No hardware, no cloud, no limits.. Discord: https://discord.gg/rCScB9cG](https://github.com/davidmonterocrespo24/velxio)
+- [Building FireStriker: Why I&#x27;m Making Civic Tech Free](https://firestriker.org/blog/building-firestriker-why-im-making-civic-tech-free)
+`;
+function renderMarkdown(md) {
+  if (typeof marked !== 'undefined' && typeof DOMPurify !== 'undefined') {
+    marked.setOptions({ breaks: true });
+    return DOMPurify.sanitize(marked.parse(md));
+  }
+  var el = document.createElement('pre');
+  el.style.whiteSpace = 'pre-wrap';
+  el.textContent = md;
+  return el.outerHTML;
+}
+document.getElementById('tab-blog').innerHTML = renderMarkdown(blogMd);
+document.getElementById('tab-notes').innerHTML = renderMarkdown(notesMd);
+
+function switchTab(tab) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  if (tab === 'blog') {
+    document.querySelectorAll('.tab-btn')[0].classList.add('active');
+    document.getElementById('tab-blog').classList.add('active');
+  } else {
+    document.querySelectorAll('.tab-btn')[1].classList.add('active');
+    document.getElementById('tab-notes').classList.add('active');
+  }
+}
+</script>
+</body>
+</html>

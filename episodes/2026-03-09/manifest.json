@@ -1,0 +1,124 @@
+{
+  "date": "2026-03-08",
+  "show_length_sec": 600,
+  "generated_at": "2026-03-08T21:44:49.694102+00:00",
+  "picks": [
+    {
+      "item_id": "item-ebe50b41",
+      "title": "Artificial-life: A simple (300 lines of code) reproduction of Computational Life",
+      "fingerprint": "ebe50b4130849f397bbed1d03c62bbf3",
+      "score": 78,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-4cf010d4",
+      "title": "Neural Boids",
+      "fingerprint": "4cf010d4301cbfb3873751740b592b20",
+      "score": 75,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-35509a29",
+      "title": "Living human brain cells play DOOM on a CL1 [video]",
+      "fingerprint": "35509a29ee4b72b4575dfde5d15a1f58",
+      "score": 75,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-4148adb3",
+      "title": "Agent Safehouse – macOS-native sandboxing for local agents",
+      "fingerprint": "4148adb37b177541126769479f41eb49",
+      "score": 72,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-83648cb4",
+      "title": "Pushing and Pulling: Three reactivity algorithms",
+      "fingerprint": "83648cb43e25dfbc0d920df060f92352",
+      "score": 62,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-f23e1a28",
+      "title": "We should revisit literate programming in the agent era",
+      "fingerprint": "f23e1a2822cacbf71d4fd92f7b1f54a8",
+      "score": 52,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-acf4a485",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-e3fb0d8f",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-a9c33891",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-b74349d9",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-6761572e",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-a79adf3f",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-460b4ad1",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-6c2d9882",
+      "reason": "Ranked too low (skip bucket)."
+    },
+    {
+      "item_id": "item-f9f9a222",
+      "reason": "Ranked too low (skip bucket)."
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-09/blog.md",
+    "show_notes_path": "out/2026-03-09/show_notes.md",
+    "script_path": "out/2026-03-09/script_2hosts.md",
+    "audio_path": "out/2026-03-09/episode_audio.wav",
+    "cover_art_path": "out/2026-03-09/cover_art.png"
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "date": "2026-03-14",
+  "episode_date_local": "2026-03-14",
+  "content_snapshot_date": "2026-03-14",
+  "show_length_sec": 554,
+  "generated_at": "2026-03-14T08:39:51.278175+00:00",
+  "is_mock": false,
+  "picks": [
+    {
+      "item_id": "item-695c1e2b",
+      "title": "1M context is now generally available for Opus 4.6 and Sonnet 4.6 | Claude",
+      "fingerprint": "695c1e2baa3a89d6b7afba16226cb09c",
+      "score": 66,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [
+        "source_intent_promotional"
+      ],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top",
+        "Anthropic News"
+      ]
+    },
+    {
+      "item_id": "item-7e857fe4",
+      "title": "Optimizing Content for Agents",
+      "fingerprint": "7e857fe4e778e58b628a52f66d55ca12",
+      "score": 60,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-5e5ff662",
+      "title": "Emacs and Vim in the Age of AI",
+      "fingerprint": "5e5ff662e617f6f74f363ad4770919bc",
+      "score": 40,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-5d2ad536",
+      "title": "CanIRun.ai — Can your machine run AI models?",
+      "fingerprint": "5d2ad536c54d5612643f296153d55cb5",
+      "score": 40,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-af6c42ed",
+      "title": "GitHub - Hammerspoon/hammerspoon: Staggeringly powerful macOS desktop automation with Lua",
+      "fingerprint": "af6c42ed34f3d033bcb1ed6d0dc60493",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    },
+    {
+      "item_id": "item-6409e8aa",
+      "title": "Parallels Confirms MacBook Neo Can Run Windows in a Virtual Machine",
+      "fingerprint": "6409e8aacc89049e83d1d3379b0743f0",
+      "score": 35,
+      "allowed_action": "METADATA_SUMMARY",
+      "risks": [],
+      "decision_reason": "Source allows METADATA_SUMMARY.",
+      "source_names": [
+        "Hacker News Top"
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "item_id": "item-1274bf5b",
+      "reason": "LINK_ONLY: Source intent uncertain: Tom's Hardwareは信頼できる技術メディアですが、タイトルの「two-week clock」という表現と「30% of global supply removed」という具体的な数字は、2026年3月時点でのカタール情勢に関する実際のニュースか確認できません。スニペットがないため、記事の内容が実際の産業ニュースか、仮定的なシナリオか、あるいは風刺的な警告記事かを判断できません。",
+      "title": "Qatar helium shutdown puts chip supply chain on a two-week clock &mdash; SK hynix forced to diversify after 30% of global supply removed from the market"
+    },
+    {
+      "item_id": "item-c7b112fb",
+      "reason": "LINK_ONLY: Source intent uncertain: タイトルは「hypercube（超立方体）の外で考える」という比喩的表現で、スニペットがないため内容が不明。lcamtuf（Michal Zalewski）は著名なセキュリティ研究者だが、タイトルだけでは技術記事か風刺かの判定が困難。",
+      "title": "You gotta think outside the hypercube"
+    },
+    {
+      "item_id": "item-60dbd623",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "I Found 39 Algolia Admin Keys Exposed Across Open Source Documentation Sites - Ben Zimmermann"
+    },
+    {
+      "item_id": "item-6d71bbda",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "GitHub - TomBadash/MouseControl: A lightweight, open-source alternative to Logitech Options+ for remapping buttons on the Logitech MX Master 3S mouse"
+    },
+    {
+      "item_id": "item-b5d05e68",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Channel Surfer - Watch YouTube Like It&#x27;s Cable TV"
+    },
+    {
+      "item_id": "item-9baf3849",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Atari 2600 BASIC Programming"
+    },
+    {
+      "item_id": "item-cf624e9e",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Our Experience with i-Ready"
+    },
+    {
+      "item_id": "item-bd863728",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "Wired headphone sales are exploding. What&#x27;s with the Bluetooth backlash?"
+    },
+    {
+      "item_id": "item-b56602d2",
+      "reason": "Ranked too low (skip bucket).",
+      "title": "A Survival Guide to a PhD (2016)"
+    }
+  ],
+  "outputs": {
+    "blog_path": "out/2026-03-14/blog.md",
+    "show_notes_path": "out/2026-03-14/show_notes.md",
+    "script_path": "out/2026-03-14/script_2hosts.md",
+    "audio_path": "out/2026-03-14/episode_audio.wav"
+  },
+  "cost": {
+    "llm": [
+      {
+        "model": "claude-haiku-4-5-20251001",
+        "calls": 42,
+        "input_tokens": 35147,
+        "output_tokens": 14752,
+        "cost_usd": 0.108907
+      },
+      {
+        "model": "claude-sonnet-4-6",
+        "calls": 18,
+        "input_tokens": 37294,
+        "output_tokens": 6817,
+        "cost_usd": 0.214137
+      }
+    ],
+    "tts": {
+      "chars": 3973,
+      "audio_sec": 533.1,
+      "cost_usd": 0.171088
+    },
+    "openai_tts_details": [],
+    "total_cost_usd": 0.494132
+  }
+}
